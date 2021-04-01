@@ -9,7 +9,7 @@ Fisher's Iris dataset was introduced by the statistician Ronald Fisher in a 1936
 The dataset consists of 150 instances, made up of  50 samples each of 3 species of iris. There were 4 features measured from each sample. These were - the length and width of the sepals and the length and width of the petals.
 While one class  (or species) is linearly separable from the other 2; the others are NOT.
 
-  https://github.com/kaob1991/pands-project2021/blob/main/1_f6KbPXwksAliMIsibFyGJw.png
+  
   
  (Image differentiating both the iris types; and the measurements taken (Source:https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5)
  
