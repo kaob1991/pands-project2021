@@ -114,6 +114,6 @@ All of the above were pre-installed in python using anaconda.
 12. https://matplotlib.org/
       (retrieved 06/04/21 @ 17.09)
 
-13. 
-
+13. https://blog.bitsrc.io/how-to-write-beautiful-and-meaningful-readme-md-for-your-next-project-897045e3f991
+      (retrieved 06/04/21 @ 18.09)
     
