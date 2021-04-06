@@ -55,4 +55,10 @@ This dataset is commonly used for machine learning, particularly in statistical 
      (retrieved 1/04/21 @ 18.56)
      
 5. https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html
+<<<<<<< HEAD
      (retrieved 1/04/21 @ 19.00) ![]()
+=======
+     (retrieved 1/04/21 @ 19.00) 
+6. https://datahub.io/machine-learning/iris#data
+     (retrieved 02/04/21 @ 18.51) 
+>>>>>>> 414c3e77ba957e1ff049aa75db0adfdd538bb2af
