@@ -83,7 +83,7 @@ iris_ver = iris.loc [iris ["class"] == "Iris-versicolor"]
 iris_vir = iris.loc [iris ["class"] == "Iris-virginica" ]
  ```
 
-and again, checked that the code had split correctly using ``` describe``` to ensure that the data returned had only 50 items per set 
+and ran the ``` describe ``` function again to demonstrate a summary of the individual data types  
 
 ## REFERENCES:
 
