@@ -74,6 +74,16 @@ All of the above were pre-installed in python using anaconda.
 
 Running the data through ```iris.describe``` returned a basic numerical summary of the data containing the mean, max, std etc of the data file 
 
+I then split the data by class using the following code 
+
+``` python
+
+iris_set = iris.loc [iris ["class"] == "Iris-setosa"]
+iris_ver = iris.loc [iris ["class"] == "Iris-versicolor"]
+iris_vir = iris.loc [iris ["class"] == "Iris-virginica" ]
+ ```
+
+and again, checked that the code had split correctly using ``` describe``` to ensure that the data returned had only 50 items per set 
 
 ## REFERENCES:
 
@@ -91,13 +101,11 @@ Running the data through ```iris.describe``` returned a basic numerical summary 
      (retrieved 1/04/21 @ 18.56)
      
 5. https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html
-<<<<<<< HEAD
-     (retrieved 1/04/21 @ 19.00) ![]()
-=======
-     (retrieved 1/04/21 @ 19.00) 
+     (retrieved 1/04/21 @ 19.00)
+
 6. https://datahub.io/machine-learning/iris#data
      (retrieved 02/04/21 @ 18.51) 
->>>>>>> 414c3e77ba957e1ff049aa75db0adfdd538bb2af
+
 7. https://stats.stackexchange.com/questions/74776/what-aspects-of-the-iris-data-set-make-it-so-successful-as-an-example-teaching
      (retrieved 06/04/21 @ 16.34)
      
@@ -119,3 +127,8 @@ Running the data through ```iris.describe``` returned a basic numerical summary 
 13. https://blog.bitsrc.io/how-to-write-beautiful-and-meaningful-readme-md-for-your-next-project-897045e3f991
       (retrieved 06/04/21 @ 18.09)
     
+14. https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d 
+      (retrieved 06/04/21 @ 18.41)
+ 
+15. https://towardsdatascience.com/exploring-classifiers-with-python-scikit-learn-iris-dataset-2bcb490d2e1b
+      (retrieved 06/04/21 @ 18.41)
