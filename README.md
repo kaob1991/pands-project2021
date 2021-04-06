@@ -11,7 +11,7 @@ While one class  (or species) is linearly separable from the other 2; the others
 
   
 
- ![](C:\Users\katie\Desktop\PANDS 2021\pands-project2021\1_f6KbPXwksAliMIsibFyGJw.png) 
+  ![](https://github.com/kaob1991/pands-project2021/blob/9f7a5f75a9bf6b480c4cbeb0c97157f3190e6eca/1_f6KbPXwksAliMIsibFyGJw.png)
 
 Image showing different species included in the data set and items measured in the dataset.
 
