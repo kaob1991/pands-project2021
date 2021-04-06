@@ -67,10 +67,12 @@ All of the above were pre-installed in python using anaconda.
   
   ```
   
- At this point I also performed a sanity check to firstly, ensure that there was no issues with the import of the libraries and secondly to ensure that the read in of the dataset was problem-free 
+ At this point I also performed a sanity check to firstly, ensure that there was no issues with the import of the libraries and secondly to ensure that the read in of the dataset was problem-free using the ```head ()``` method. 
       
 
 ### Basic analysis 
+
+Running the data through ```iris.describe``` returned a basic numerical summary of the data containing the mean, max, std etc of the data file 
 
 
 ## REFERENCES:
