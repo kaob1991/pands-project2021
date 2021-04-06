@@ -10,9 +10,13 @@ The dataset consists of 150 instances, made up of  50 samples each of 3 species 
 While one class  (or species) is linearly separable from the other 2; the others are NOT.
 
   
-  
- (Image differentiating both the iris types; and the measurements taken (Source:https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5)
- 
+
+ ![](C:\Users\katie\Desktop\PANDS 2021\pands-project2021\1_f6KbPXwksAliMIsibFyGJw.png) 
+
+Image showing different species included in the data set and items measured in the dataset.
+
+​	(Source:https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5)
+
 This dataset is commonly used for machine learning, particularly in statistical classification techniques. In fact it is so popular that the dataset is readily available through the scikit-learn package, used in machine learning 
 
 
@@ -43,7 +47,7 @@ This dataset is commonly used for machine learning, particularly in statistical 
 2. https://archive.ics.uci.edu/ml/datasets/iris
 
     (retrieved 17/03/2021 @18.30)
- 
+
 3. https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5 
      (retrieved 1/04/21 @ 18.43)
      
@@ -51,4 +55,4 @@ This dataset is commonly used for machine learning, particularly in statistical 
      (retrieved 1/04/21 @ 18.56)
      
 5. https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html
-     (retrieved 1/04/21 @ 19.00) 
+     (retrieved 1/04/21 @ 19.00) ![]()
