@@ -42,10 +42,10 @@ This dataset is commonly used for machine learning, particularly in statistical 
 ## Dataset Analysis
 
 ### Libraries Used
-*** NumPy imported as np 
-*** pandas imported as pd
-*** seaborn imported as sns
-*** matplotlib.pyplot imported as plt
+- NumPy imported as np 
+- pandas imported as pd
+- seaborn imported as sns
+- matplotlib.pyplot imported as plt
 
 - NumPy is a module which  supports large, multi-dimensional arrays and provides large collection of high-level mathematical functions which can be used on these arrays
 
