@@ -63,6 +63,22 @@ print ("", file = out)
 # Demonstrating the correlation between the various variable types 
 print ("Correlation table between the various data types:", file = out)
 print (iris.corr(), file = out) 
+print ("", file = out)
+print ("", file = out)
+
+
+# Demonstrating the correlation within each individual species
+print ("Correlation table within the Iris Setosa species", file = out)
+print (iris_set.corr(), file = out)
+print ("", file = out)
+print ("Correlation table within the Iris Versicolor species", file = out)
+print (iris_ver.corr(), file = out)
+print ("", file = out)
+print ("Correlation table within the Iris Virginica species", file = out)
+print (iris_vir.corr(), file = out)
+print ("", file = out)
+
+
 
 
 
