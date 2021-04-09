@@ -73,11 +73,11 @@ All of the above were pre-installed in python using anaconda.
    ```
 
  At this point I also performed a sanity check to ensure that there was no issues with the import of the libraries and to ensure that the read in of the dataset was problem-free.
- 
+
  ### Basic Analysis
 
  I ran ```shape()``` to get the parameters of the data file, important for understanding the scope of the dataframe.
- 
+
  ``` python
  print ("This is the shape of the datafile:\n(first number denotes the number of rows, the second the number of columns)", file = out)
 print (iris.shape, file = out)
@@ -168,6 +168,31 @@ Looking at the data, it shows a high level of correlation between petal length a
 
 I also ran a correlation on the individual species's variables to explore the levels of correlation within. 
 
+```
+python
+print ("Correlation table within the Iris Setosa species", file = out)
+
+print (iris_set.corr(), file = out)
+
+print ("", file = out)
+
+print ("Correlation table within the Iris Versicolor species", file = out)
+
+print (iris_ver.corr(), file = out)
+
+print ("", file = out)
+
+print ("Correlation table within the Iris Virginica species", file = out)
+
+print (iris_vir.corr(), file = out)
+
+print ("", file = out)
+```
+
+
+
+![](https://github.com/kaob1991/pands-project2021/blob/6da0bdda0f840ea5d1822a0d7f661993d4b0421c/species%20correlation.png)
+
 
 
 
@@ -218,7 +243,7 @@ I also ran a correlation on the individual species's variables to explore the le
 
 15. https://towardsdatascience.com/exploring-classifiers-with-python-scikit-learn-iris-dataset-2bcb490d2e1b
       (retrieved 06/04/21 @ 18.41)
-      
+    
 16. https://www.researchgate.net/post/What-do-you-consider-a-good-standard-deviation
       (retrieved 9/04/21 @ 18.45)
 
