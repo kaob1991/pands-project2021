@@ -122,7 +122,7 @@ This returned the following:
 
 ![](https://github.com/kaob1991/pands-project2021/blob/13a5198bb8aaf833a1aa79d435061477ab345a04/describe.png)
 
-Looking at the Standard Deviation we can see that it is relatively low for 3 of the 4 variable types ( petal width, sepal length, sepal width) with a number below 1. However the petal length has a higher standard deviation suggesting that there is more variabilty in the measurements of this particular variable than the others.
+Looking at the Standard Deviation we can see that it is relatively low for 3 of the 4 variable types ( petal width, sepal length, sepal width) with a number below 1. However the petal length has a higher standard deviation suggesting that there is more variability in the measurements of this particular variable than the others.
 
 
 I established 3 different variable types ( 1 for each species of the flower) and also ran a numerical summary of each individual species, again using ```describe()```
