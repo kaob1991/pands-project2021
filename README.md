@@ -107,7 +107,7 @@ Which returns the following details:
 
 ![](https://github.com/kaob1991/pands-project2021/blob/13a5198bb8aaf833a1aa79d435061477ab345a04/head.png)
 
-We can see from the output it shows that there are 5 variables, and 4 of them are of type float (sepal length, sepal width, petal length, petal width), and one string which is the species type. 
+We can see from the output it shows that there are 5 variables, and 4 of them are of type float (sepal length, sepal width, petal length, petal width), and one string which is the species type (class). 
 
 
 Running the data through ```describe()``` returned a basic numerical summary of the data containing the mean, max, standard deviation etc of the data file 
