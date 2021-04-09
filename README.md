@@ -66,13 +66,68 @@ All of the above were pre-installed in python using anaconda.
   iris = pd.read ("iris_csv.csv")
   
   ```
+
+  I also created the output file:
+   ``` python 
+   out = open("summary_file_text_output.txt", "w")
+   ```
   
- At this point I also performed a sanity check to firstly, ensure that there was no issues with the import of the libraries and secondly to ensure that the read in of the dataset was problem-free using the ```head ()``` method. 
+ At this point I also performed a sanity check to ensure that there was no issues with the import of the libraries and to ensure that the read in of the dataset was problem-free.
+
+ I ran ```shape()``` to get the parameters of the data file, important for understanding the scope of the dataframe
+ ``` python
+ print ("This is the shape of the datafile:\n(first number denotes the number of rows, the second the number of columns)", file = out)
+print (iris.shape, file = out)
+print ("",file = out)
+print ("", file = out)
+```
+
+ I also used ```head()``` to demonstrate the layout of the file, and the various names of the variables 
+``` python
+
+print("General layout of Fisher's Iris datafile:", file = out)
+print(iris.head(5), file = out)
+print ("", file = out)
+print ("", file = out)
+```
       
 
 ### Basic analysis 
 
-Running the data through ```iris.describe``` returned a basic numerical summary of the data containing the mean, max, std etc of the data file 
+Running the data through ```describe()``` returned a basic numerical summary of the data containing the mean, max, std etc of the data file 
+```python
+print("Numerical summary of the datatypes:", file = out)
+print(iris.describe(), file = out)
+print ("", file = out)
+print ("", file = out)
+```
+
+
+I established 3 different variable types ( 1 for each species of the flower) and also ran a numerical summary of each individual species, again using ```describe()```
+
+```python
+iris_set = iris.loc [iris ["class"] == "Iris-setosa"]
+iris_ver = iris.loc [iris ["class"] == "Iris-versicolor"]
+iris_vir = iris.loc [iris ["class"] == "Iris-virginica" ]
+
+
+print ("Numerical summary of the Iris Setosa", file = out)
+print (iris_set.describe(), file = out)
+print ("", file = out)
+print ("Numerical summary of the Iris Versicolor", file = out)
+print (iris_ver.describe(), file = out)
+print ("", file = out)
+print ("Numerical summary of the Iris Virginica", file = out)
+print (iris_vir.describe(), file = out)
+print ("", file = out)
+print ("", file = out)
+```
+
+Finally, I completed a correlation on the datafile using ```corr()``` to demonstrate the relationship between the variables. This produces the relationship between them on a scale between 0 and 1, with 0 being no retaionship detected, and 1 being a perfect correlation. 
+```python
+print ("Correlation table between the various data types:", file = out)
+print (iris.corr(), file = out) 
+```
 
 
 ## REFERENCES:
