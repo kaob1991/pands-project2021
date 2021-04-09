@@ -168,30 +168,24 @@ Looking at the data, it shows a high level of correlation between petal length a
 
 I also ran a correlation on the individual species's variables to explore the levels of correlation within. 
 
-```
-python
+```python
+
 print ("Correlation table within the Iris Setosa species", file = out)
-
 print (iris_set.corr(), file = out)
-
 print ("", file = out)
-
 print ("Correlation table within the Iris Versicolor species", file = out)
-
 print (iris_ver.corr(), file = out)
-
 print ("", file = out)
-
 print ("Correlation table within the Iris Virginica species", file = out)
-
 print (iris_vir.corr(), file = out)
-
 print ("", file = out)
 ```
 
 
 
 ![](https://github.com/kaob1991/pands-project2021/blob/6da0bdda0f840ea5d1822a0d7f661993d4b0421c/species%20correlation.png)
+
+
 
 
 
