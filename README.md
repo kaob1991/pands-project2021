@@ -182,11 +182,16 @@ print ("", file = out)
 ```
 
 
-
 ![](https://github.com/kaob1991/pands-project2021/blob/6da0bdda0f840ea5d1822a0d7f661993d4b0421c/species%20correlation.png)
 
+The results show the following:
+- Low/Moderate levels of correlation in Iris Setosa between the variables with the exception of the sepal width andlength which has a level of .746780
+- High level of correlation in Iris versicolor betweeen the petal length and petal width (.786668) and petal length and sepal length (.754049)
+- Low/ Moderate levels of correlation in Irish Virginica between the variables with the exception of petal length and sepal length (.864225)
 
 
+
+### Plotting Analysis
 
 
 
@@ -243,3 +248,6 @@ print ("", file = out)
 
 17. https://www.statisticshowto.com/probability-and-statistics/correlation-analysis/
       (retrieved 9/04/21 @ 19.07)
+      
+18. https://www.statisticssolutions.com/pearsons-correlation-coefficient/#:~:text=High%20degree%3A%20If%20the%20coefficient,When%20the%20value%20lies%20below%20%2B%20.&text=No%20correlation%3A%20When%20the%20value%20is%20zero.
+      (retrieved 9/04/21 @ 20.02) 
