@@ -60,7 +60,7 @@ All of the above were pre-installed in python using anaconda.
 ### Dataset 
 
  The dataset was retrieved from https://archive.ics.uci.edu/ml/datasets/iris as a csv file and imported into the program as follows: 
- 
+
   ``` python
   
   iris = pd.read ("iris_csv.csv")
@@ -71,7 +71,7 @@ All of the above were pre-installed in python using anaconda.
    ``` python 
    out = open("summary_file_text_output.txt", "w")
    ```
-  
+
  At this point I also performed a sanity check to ensure that there was no issues with the import of the libraries and to ensure that the read in of the dataset was problem-free.
 
  I ran ```shape()``` to get the parameters of the data file, important for understanding the scope of the dataframe
@@ -80,9 +80,16 @@ All of the above were pre-installed in python using anaconda.
 print (iris.shape, file = out)
 print ("",file = out)
 print ("", file = out)
-```
+ ```
+
+This returned the following output: 
+
+
+
+![](https://github.com/kaob1991/pands-project2021/blob/13a5198bb8aaf833a1aa79d435061477ab345a04/shape.png)
 
  I also used ```head()``` to demonstrate the layout of the file, and the various names of the variables 
+
 ``` python
 
 print("General layout of Fisher's Iris datafile:", file = out)
@@ -90,7 +97,10 @@ print(iris.head(5), file = out)
 print ("", file = out)
 print ("", file = out)
 ```
-      
+
+Which returns the following details: 
+
+![](https://github.com/kaob1991/pands-project2021/blob/13a5198bb8aaf833a1aa79d435061477ab345a04/head.png)
 
 ### Basic analysis 
 
@@ -102,6 +112,9 @@ print ("", file = out)
 print ("", file = out)
 ```
 
+This returned the following: 
+
+![](https://github.com/kaob1991/pands-project2021/blob/13a5198bb8aaf833a1aa79d435061477ab345a04/describe.png)
 
 I established 3 different variable types ( 1 for each species of the flower) and also ran a numerical summary of each individual species, again using ```describe()```
 
@@ -123,22 +136,24 @@ print ("", file = out)
 print ("", file = out)
 ```
 
+This returns the output for each individual species types: 
+
+![](https://github.com/kaob1991/pands-project2021/blob/13a5198bb8aaf833a1aa79d435061477ab345a04/describe%20iris.png)
+
+
+
 Finally, I completed a correlation on the datafile using ```corr()``` to demonstrate the relationship between the variables. This produces the relationship between them on a scale between 0 and 1, with 0 being no retaionship detected, and 1 being a perfect correlation. 
+
 ```python
 print ("Correlation table between the various data types:", file = out)
 print (iris.corr(), file = out) 
 ```
 
-I then split the data by class using the following code 
+The results are as follows: 
 
-``` python
+![](https://github.com/kaob1991/pands-project2021/blob/13a5198bb8aaf833a1aa79d435061477ab345a04/correlation.png)
 
-iris_set = iris.loc [iris ["class"] == "Iris-setosa"]
-iris_ver = iris.loc [iris ["class"] == "Iris-versicolor"]
-iris_vir = iris.loc [iris ["class"] == "Iris-virginica" ]
- ```
 
-and ran the ``` describe ``` function again to demonstrate a summary of the individual data types  
 
 ## REFERENCES:
 
@@ -184,6 +199,6 @@ and ran the ``` describe ``` function again to demonstrate a summary of the indi
     
 14. https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d 
       (retrieved 06/04/21 @ 18.41)
- 
+
 15. https://towardsdatascience.com/exploring-classifiers-with-python-scikit-learn-iris-dataset-2bcb490d2e1b
       (retrieved 06/04/21 @ 18.41)
