@@ -59,7 +59,7 @@ All of the above were pre-installed in python using anaconda.
 
 ### Dataset 
 
- The dataset was retrieved from https://archive.ics.uci.edu/ml/datasets/iris as a csv file and imported into the program as follows: 
+ The dataset was retrieved from https://archive.ics.uci.edu/ml/datasets/iris as a csv (comma seperated values) file and imported into the program as follows: 
 
   ``` python
   
