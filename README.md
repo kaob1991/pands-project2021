@@ -73,8 +73,11 @@ All of the above were pre-installed in python using anaconda.
    ```
 
  At this point I also performed a sanity check to ensure that there was no issues with the import of the libraries and to ensure that the read in of the dataset was problem-free.
+ 
+ ### Basic Analysis
 
- I ran ```shape()``` to get the parameters of the data file, important for understanding the scope of the dataframe
+ I ran ```shape()``` to get the parameters of the data file, important for understanding the scope of the dataframe.
+ 
  ``` python
  print ("This is the shape of the datafile:\n(first number denotes the number of rows, the second the number of columns)", file = out)
 print (iris.shape, file = out)
@@ -82,11 +85,13 @@ print ("",file = out)
 print ("", file = out)
  ```
 
-This returned the following output: 
+This returned the following output which demonstrates that the datafile is 150 rows and 5 columns wide: 
 
 
 
 ![](https://github.com/kaob1991/pands-project2021/blob/13a5198bb8aaf833a1aa79d435061477ab345a04/shape.png)
+
+
 
  I also used ```head()``` to demonstrate the layout of the file, and the various names of the variables 
 
@@ -102,7 +107,8 @@ Which returns the following details:
 
 ![](https://github.com/kaob1991/pands-project2021/blob/13a5198bb8aaf833a1aa79d435061477ab345a04/head.png)
 
-### Basic analysis 
+We can see from the output it shows that there are 5 variables, and 4 of them are of type float (sepal length, sepal width, petal length, petal width), and one string which is the species type. 
+
 
 Running the data through ```describe()``` returned a basic numerical summary of the data containing the mean, max, std etc of the data file 
 ```python
@@ -115,6 +121,8 @@ print ("", file = out)
 This returned the following: 
 
 ![](https://github.com/kaob1991/pands-project2021/blob/13a5198bb8aaf833a1aa79d435061477ab345a04/describe.png)
+
+Looking at the Standard Deviation we can see that it relatively low for 3 of the 4 variable types ( petal width, sepal length, sepal width) with a number below 1. However the petal length has a higher standard deviation suggesting that there is more variabilty in the measurements of this particular variable that the other
 
 I established 3 different variable types ( 1 for each species of the flower) and also ran a numerical summary of each individual species, again using ```describe()```
 
@@ -140,6 +148,7 @@ This returns the output for each individual species types:
 
 ![](https://github.com/kaob1991/pands-project2021/blob/13a5198bb8aaf833a1aa79d435061477ab345a04/describe%20iris.png)
 
+It gives a nice idea of the average real-life sizes of the flowers. It can be seen that, on average, the Iris Setosa has a large sepal compared to the petal, whereas the Iris Virgincia and Versicolor's petals and sepals are closer in size. 
 
 
 Finally, I completed a correlation on the datafile using ```corr()``` to demonstrate the relationship between the variables. This produces the relationship between them on a scale between 0 and 1, with 0 being no retaionship detected, and 1 being a perfect correlation. 
@@ -153,6 +162,8 @@ The results are as follows:
 
 ![](https://github.com/kaob1991/pands-project2021/blob/13a5198bb8aaf833a1aa79d435061477ab345a04/correlation.png)
 
+
+Looking at the data, it shows a high level of correlation between petal length and petal width (.962757) and also, to a lesser extent, between sepal length and petal length (.871754); and sepal length and petal width (.817954).
 
 
 ## REFERENCES:
@@ -202,3 +213,9 @@ The results are as follows:
 
 15. https://towardsdatascience.com/exploring-classifiers-with-python-scikit-learn-iris-dataset-2bcb490d2e1b
       (retrieved 06/04/21 @ 18.41)
+      
+16. https://www.researchgate.net/post/What-do-you-consider-a-good-standard-deviation
+      (retrieved 9/04/21 @ 18.45)
+
+17. https://www.statisticshowto.com/probability-and-statistics/correlation-analysis/
+      (retrieved 9/04/21 @ 19.07)
