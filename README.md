@@ -110,7 +110,7 @@ Which returns the following details:
 We can see from the output it shows that there are 5 variables, and 4 of them are of type float (sepal length, sepal width, petal length, petal width), and one string which is the species type. 
 
 
-Running the data through ```describe()``` returned a basic numerical summary of the data containing the mean, max, std etc of the data file 
+Running the data through ```describe()``` returned a basic numerical summary of the data containing the mean, max, standard deviation etc of the data file 
 ```python
 print("Numerical summary of the datatypes:", file = out)
 print(iris.describe(), file = out)
@@ -122,7 +122,8 @@ This returned the following:
 
 ![](https://github.com/kaob1991/pands-project2021/blob/13a5198bb8aaf833a1aa79d435061477ab345a04/describe.png)
 
-Looking at the Standard Deviation we can see that it relatively low for 3 of the 4 variable types ( petal width, sepal length, sepal width) with a number below 1. However the petal length has a higher standard deviation suggesting that there is more variabilty in the measurements of this particular variable that the other
+Looking at the Standard Deviation we can see that it is relatively low for 3 of the 4 variable types ( petal width, sepal length, sepal width) with a number below 1. However the petal length has a higher standard deviation suggesting that there is more variabilty in the measurements of this particular variable than the others.
+
 
 I established 3 different variable types ( 1 for each species of the flower) and also ran a numerical summary of each individual species, again using ```describe()```
 
@@ -163,8 +164,7 @@ The results are as follows:
 ![](https://github.com/kaob1991/pands-project2021/blob/13a5198bb8aaf833a1aa79d435061477ab345a04/correlation.png)
 
 
-Looking at the data, it shows a high level of correlation between petal length and petal width (.962757) and also, to a lesser extent, between sepal length and petal length (.871754); and sepal length and petal width (.817954).
-
+Looking at the data, it shows a high level of correlation between petal length and petal width (.962757) and also, to a lesser extent, between sepal length and petal length (.871754); and sepal length and petal width (.817954). We shall explore the following data further in the plotting investigations below
 
 ## REFERENCES:
 
