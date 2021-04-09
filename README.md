@@ -42,18 +42,18 @@ This dataset is commonly used for machine learning, particularly in statistical 
 ## Dataset Analysis
 
 ### Libraries Used
-- NumPy imported as np 
-- pandas imported as pd
-- seaborn imported as sns
-- matplotlib.pyplot imported as plt
+- ```NumPy``` imported as ```np``` 
+- ```pandas``` imported as ```pd```
+- ```seaborn``` imported as ```sns```
+- ```matplotlib.pyplot``` imported as ```plt```
 
-- NumPy is a module which  supports large, multi-dimensional arrays and provides large collection of high-level mathematical functions which can be used on these arrays
+- ```NumPy``` is a module which  supports large, multi-dimensional arrays and provides large collection of high-level mathematical functions which can be used on these arrays
 
-- pandas is a high-level, powerful module used for real-world data analysis and data manipulation. It provides fast, flexible and expressive data structures designed to   make working with data both easy and intuitive 
+- ```pandas``` is a high-level, powerful module used for real-world data analysis and data manipulation. It provides fast, flexible and expressive data structures          designed to make working with data both easy and intuitive 
 
-- seaborn is a Python data visualisation library based on matplotlib that offers less-dated choices for plot style and color defaults than matplotlib, defines simple       high-level functions for common statistical plot types, and integrates with the functionality provided by Pandas DataFrames.
+- ```seaborn``` is a Python data visualisation library based on matplotlib that offers less-dated choices for plot style and color defaults than matplotlib, defines       simple high-level functions for common statistical plot types, and integrates with the functionality provided by Pandas DataFrames.
 
-- matplotlib is a module for static, interactive & animated visualisations allowing high levels of customisation and the embedding of plots into applications; and pyplot   provides a MATLAB-like interface within this module. 
+- ```matplotlib``` is a module for static, interactive & animated visualisations allowing high levels of customisation and the embedding of plots into applications; and   pyplot provides a MATLAB-like interface within this module. 
 
 All of the above were pre-installed in python using anaconda. 
 
