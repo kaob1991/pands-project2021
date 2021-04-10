@@ -17,7 +17,7 @@ Image showing different species included in the data set and items measured in t
 
 ​	(Source:https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5)
 
-This dataset is commonly used for machine learning, particularly in statistical classification techniques. It is widely considered to be a good option for illustrating problems in the areas of statistical graphics, multivariate statistics and machine learning. It comprises of real, good quality data, in a small but meaningful dataset which offers a simple but challenging tast of discriminating between various types. In fact it is so popular that the dataset is readily available through the scikit-learn package, used in machine learning. 
+This dataset is commonly used for machine learning, particularly in statistical classification techniques. It is widely considered to be a good option for illustrating problems in the areas of statistical graphics, multivariate statistics and machine learning. The UCI machine learning repository, often considered the source of the "true" dataset, contains well over 200 papers and books referencing the use of the dataset. It comprises of real, good quality data, in a small but meaningful dataset which offers a simple but challenging tast of discriminating between various types. In fact it is so popular that the dataset is readily available through the scikit-learn package, used in machine learning. 
 
 
 
@@ -251,3 +251,9 @@ The results show the following:
       
 18. https://www.statisticssolutions.com/pearsons-correlation-coefficient/#:~:text=High%20degree%3A%20If%20the%20coefficient,When%20the%20value%20lies%20below%20%2B%20.&text=No%20correlation%3A%20When%20the%20value%20is%20zero.
       (retrieved 9/04/21 @ 20.02) 
+ 
+ 19. https://github.com/TracyRenee61/Misc-Predictions/blob/main/Iris_sklearn.ipynb
+       (retrieved 10/04/21 @ 13.51)
+      
+ 20. https://blog.revolutionanalytics.com/2014/08/the-iris-data-set-for-big-data.html
+        (retrieved 10/04/21 @ 13.54)
