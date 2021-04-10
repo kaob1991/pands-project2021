@@ -17,7 +17,7 @@ Image showing different species included in the data set and items measured in t
 
 ​	(Source:https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5)
 
-This dataset is commonly used for machine learning, particularly in statistical classification techniques across multiple disciples. It is widely considered to be a good option for illustrating problems in the areas of statistical graphics, multivariate statistics and machine learning. The UCI machine learning repository, often considered the source of the "true" dataset, contains well over 200 papers and books referencing the use of the dataset.  It comprises of real, good quality data, in a small but meaningful dataset which offers a simple but challenging tast of discriminating between various types. In fact it is so popular that the dataset is readily available through the scikit-learn package, used in machine learning. 
+This dataset is commonly used for machine learning, particularly in statistical classification techniques across multiple disciples. It is widely considered to be a good option for illustrating problems in the areas of statistical graphics, multivariate statistics and machine learning. The UCI machine learning repository, often considered the source of the "true" dataset, contains well over 200 papers and books referencing the use of the dataset.  It comprises of real, good quality data, in a small but meaningful dataset which offers a simple but challenging task of discriminating between various types. In fact it is so popular that the dataset is readily available through the scikit-learn package, used in machine learning. 
 
 
 
@@ -51,7 +51,7 @@ This dataset is commonly used for machine learning, particularly in statistical 
 
 - ```pandas``` is a high-level, powerful module used for real-world data analysis and data manipulation. It provides fast, flexible and expressive data structures          designed to make working with data both easy and intuitive 
 
-- ```seaborn``` is a Python data visualisation library based on matplotlib that offers less-dated choices for plot style and color defaults than matplotlib, defines       simple high-level functions for common statistical plot types, and integrates with the functionality provided by Pandas DataFrames.
+- ```seaborn``` is a Python data visualisation library based on matplotlib that offers less-dated choices for plot style and color defaults than matplotlib, defines  simple high-level functions for common statistical plot types, and integrates with the functionality provided by Pandas DataFrames.
 
 - ```matplotlib``` is a module for static, interactive & animated visualisations allowing high levels of customisation and the embedding of plots into applications; and   pyplot provides a MATLAB-like interface within this module. 
 
@@ -149,10 +149,10 @@ This returns the output for each individual species types:
 
 ![](https://github.com/kaob1991/pands-project2021/blob/13a5198bb8aaf833a1aa79d435061477ab345a04/describe%20iris.png)
 
-It gives a nice idea of the average real-life sizes of the flowers. It can be seen that, on average, the Iris Setosa has a large sepal compared to the petal, whereas the Iris Virgincia and Versicolor's petals and sepals are closer in size. 
+It gives a nice idea of the average real-life sizes of the flowers. It can be seen that, on average, the Iris Setosa has a large sepal compared to the petal, whereas the Iris Virginica and Versicolor's petals and sepals are closer in size. 
 
 
-Finally, I completed a correlation on the datafile using ```corr()``` to demonstrate the relationship between the variables. This produces the relationship between them on a scale between 0 and 1, with 0 being no retaionship detected, and 1 being a perfect correlation. 
+Finally, I completed a correlation on the datafile using ```corr()``` to demonstrate the relationship between the variables. This produces the relationship between them on a scale between 0 and 1, with 0 being no relationship detected, and 1 being a perfect correlation. 
 
 ```python
 print ("Correlation table between the various data types:", file = out)
@@ -171,7 +171,9 @@ fig = plt.figure(figsize = (15,9))
 sns.heatmap(iris_df.corr(), cmap = "Blues", annot = True)
 ```
 
-I also ran a correlation on the individual species's variables to explore the levels of correlation within. 
+![](https://github.com/kaob1991/pands-project2021/blob/ad0507feffa779bbc51e5fa42189a926e07067ae/heatmap_correlation.png)
+
+I also ran a correlation on the individual species' variables to explore the levels of correlation within, and again added heatmaps for ease of visibility. 
 
 ```python
 
@@ -186,12 +188,17 @@ print (iris_vir.corr(), file = out)
 print ("", file = out)
 ```
 
-
 ![](https://github.com/kaob1991/pands-project2021/blob/6da0bdda0f840ea5d1822a0d7f661993d4b0421c/species%20correlation.png)
+
+![](https://github.com/kaob1991/pands-project2021/blob/ad0507feffa779bbc51e5fa42189a926e07067ae/heatmap_setosa.png)
+
+![](https://github.com/kaob1991/pands-project2021/blob/ad0507feffa779bbc51e5fa42189a926e07067ae/heatmap_versicolor.png)
+
+![](https://github.com/kaob1991/pands-project2021/blob/ad0507feffa779bbc51e5fa42189a926e07067ae/heatmap_virginica.png)
 
 The results show the following:
 - Low/Moderate levels of correlation in Iris Setosa between the variables with the exception of the sepal width and length (.746780)
-- High level of correlation in Iris versicolor betweeen the petal length and petal width (.786668) and petal length and sepal length (.754049)
+- High level of correlation in Iris versicolor between the petal length and petal width (.786668) and petal length and sepal length (.754049)
 - Low/ Moderate levels of correlation in Irish Virginica between the variables with the exception of petal length and sepal length (.864225)
 
 
@@ -255,23 +262,23 @@ The results show the following:
 
 17. https://www.statisticshowto.com/probability-and-statistics/correlation-analysis/
       (retrieved 9/04/21 @ 19.07)
-      
+    
 18. https://www.statisticssolutions.com/pearsons-correlation-coefficient/#:~:text=High%20degree%3A%20If%20the%20coefficient,When%20the%20value%20lies%20below%20%2B%20.&text=No%20correlation%3A%20When%20the%20value%20is%20zero.
       (retrieved 9/04/21 @ 20.02) 
- 
+
  19. https://github.com/TracyRenee61/Misc-Predictions/blob/main/Iris_sklearn.ipynb
        (retrieved 10/04/21 @ 13.51)
-      
+     
  20. https://blog.revolutionanalytics.com/2014/08/the-iris-data-set-for-big-data.html
         (retrieved 10/04/21 @ 13.54)
-        
+     
  21. Pearson, E. (1951). Biometrika, 38(1/2), 257-259. doi:10.2307/2332332
         (retrieved 10/04/21 @ 14.03)
-        
+     
  22. Janert, PK 2010, Data Analysis with Open Source Tools : A Hands-On Guide for Programmers and Data Scientists, O'Reilly Media, Incorporated, Sebastopol. Available from: ProQuest Ebook Central. [10 April 2021].
 
 23. https://methods.sagepub.com/base/download/DatasetHowToGuide/partial-correlation-in-fishers-iris-1936
         (retrieved 10/04/21 @ 14.38)
-        
+    
  24. https://towardsdatascience.com/eda-of-the-iris-dataset-190f6dfd946d
  25.     (retrieved 10/04/21 @ 18.16)
