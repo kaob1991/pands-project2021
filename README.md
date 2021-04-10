@@ -165,6 +165,11 @@ The results are as follows:
 
 
 Looking at the data, it shows a high level of correlation between petal length and petal width (.962757) and also, to a lesser extent, between sepal length and petal length (.871754); and sepal length and petal width (.817954). We shall explore the following data further in the plotting investigations below. 
+Following some external research I decided to also run a heatmap to better display the levels of correlation in a more visually accessible matter (see reference number 24 below). 
+``` python
+fig = plt.figure(figsize = (15,9))
+sns.heatmap(iris_df.corr(), cmap = "Blues", annot = True)
+```
 
 I also ran a correlation on the individual species's variables to explore the levels of correlation within. 
 
@@ -267,3 +272,6 @@ The results show the following:
 
 23. https://methods.sagepub.com/base/download/DatasetHowToGuide/partial-correlation-in-fishers-iris-1936
         (retrieved 10/04/21 @ 14.38)
+        
+ 24. https://towardsdatascience.com/eda-of-the-iris-dataset-190f6dfd946d
+ 25.     (retrieved 10/04/21 @ 18.16)
