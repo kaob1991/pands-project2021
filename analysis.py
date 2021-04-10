@@ -68,7 +68,7 @@ print ("", file = out)
 
 # Demonstrating a heatmap for correlation above 
 # (ref:https://towardsdatascience.com/eda-of-the-iris-dataset-190f6dfd946d)
-
+'''
 fig = plt.figure(figsize = (8,3))
 sns.heatmap(iris.corr(),cmap = "Blues", annot = True)
 plt.show()
@@ -92,6 +92,37 @@ print ("", file = out)
 fig = plt.figure(figsize = (8,3))
 sns.heatmap(iris_vir.corr(),cmap = "Purples", annot = True)
 plt.show()
+'''
+
+#Creating a histogram for each variable and save it to a png file
+plt.hist(iris["sepallength"], color = "b")
+plt.title ("Sepal Length")
+plt.ylabel ("Count")
+plt.xlabel ("Sepal length (cm's)")
+#plt.show()
+plt.savefig("sepal_length_hist.png")
+
+plt.hist(iris["petallength"],color = "r")
+plt.title ("Petal Length")
+plt.ylabel ("Count")
+plt.xlabel ("Petal length (cm's)")
+#plt.show()
+plt.savefig("petal_length_hist.png")
+
+plt.hist(iris["sepalwidth"], color = "g")
+plt.title ("Sepal Width")
+plt.ylabel ("Count")
+plt.xlabel ("Sepal width (cm's)")
+#plt.show()
+plt.savefig("sepal_width_hist.png")
+
+plt.hist(iris["petalwidth"], color = "m")
+plt.title ("Petal Width")
+plt.ylabel ("Count")
+plt.xlabel ("Petal width (cm's)")
+#plt.show()
+plt.savefig("petal_width_hist.png")
+
 
 
 

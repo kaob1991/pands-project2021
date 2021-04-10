@@ -66,24 +66,3 @@ petallength     0.871754   -0.420516     1.000000    0.962757
 petalwidth      0.817954   -0.356544     0.962757    1.000000
 
 
-Correlation table within the Iris Setosa species
-             sepallength  sepalwidth  petallength  petalwidth
-sepallength     1.000000    0.746780     0.263874    0.279092
-sepalwidth      0.746780    1.000000     0.176695    0.279973
-petallength     0.263874    0.176695     1.000000    0.306308
-petalwidth      0.279092    0.279973     0.306308    1.000000
-
-Correlation table within the Iris Versicolor species
-             sepallength  sepalwidth  petallength  petalwidth
-sepallength     1.000000    0.525911     0.754049    0.546461
-sepalwidth      0.525911    1.000000     0.560522    0.663999
-petallength     0.754049    0.560522     1.000000    0.786668
-petalwidth      0.546461    0.663999     0.786668    1.000000
-
-Correlation table within the Iris Virginica species
-             sepallength  sepalwidth  petallength  petalwidth
-sepallength     1.000000    0.457228     0.864225    0.281108
-sepalwidth      0.457228    1.000000     0.401045    0.537728
-petallength     0.864225    0.401045     1.000000    0.322108
-petalwidth      0.281108    0.537728     0.322108    1.000000
-
