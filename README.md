@@ -17,7 +17,7 @@ Image showing different species included in the data set and items measured in t
 
 ​	(Source:https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5)
 
-This dataset is commonly used for machine learning, particularly in statistical classification techniques. It is widely considered to be a good option for illustrating problems in the areas of statistical graphics, multivariate statistics and machine learning. The UCI machine learning repository, often considered the source of the "true" dataset, contains well over 200 papers and books referencing the use of the dataset. It comprises of real, good quality data, in a small but meaningful dataset which offers a simple but challenging tast of discriminating between various types. In fact it is so popular that the dataset is readily available through the scikit-learn package, used in machine learning. 
+This dataset is commonly used for machine learning, particularly in statistical classification techniques across multiple disciples. It is widely considered to be a good option for illustrating problems in the areas of statistical graphics, multivariate statistics and machine learning. The UCI machine learning repository, often considered the source of the "true" dataset, contains well over 200 papers and books referencing the use of the dataset.  It comprises of real, good quality data, in a small but meaningful dataset which offers a simple but challenging tast of discriminating between various types. In fact it is so popular that the dataset is readily available through the scikit-learn package, used in machine learning. 
 
 
 
@@ -195,6 +195,8 @@ The results show the following:
 
 
 
+
+
 ## REFERENCES:
 
 1. Https://en.wikipedia.org/wiki/Iris_flower_data_set 
@@ -262,3 +264,6 @@ The results show the following:
         (retrieved 10/04/21 @ 14.03)
         
  22. Janert, PK 2010, Data Analysis with Open Source Tools : A Hands-On Guide for Programmers and Data Scientists, O'Reilly Media, Incorporated, Sebastopol. Available from: ProQuest Ebook Central. [10 April 2021].
+
+23. https://methods.sagepub.com/base/download/DatasetHowToGuide/partial-correlation-in-fishers-iris-1936
+        (retrieved 10/04/21 @ 14.38)
