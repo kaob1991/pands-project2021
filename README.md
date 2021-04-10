@@ -205,6 +205,18 @@ The results show the following:
 
 ### Plotting Analysis
 
+Following the summary analysis I then moved onto plotting the variables using a histogram. This will display the variables in a plot that shows the frequency that individual variables appear in the dataframe. 
+I used the following sample code, making changes to color and labels as appropriate to adequately differentiate the variables. 
+
+```python
+plt.hist(iris["sepallength"], color = "b")
+plt.title ("Sepal Length")
+plt.ylabel ("Count")
+plt.xlabel ("Sepal length (cm's)")
+#plt.show()
+plt.savefig("sepal_length_hist.png")
+```
+
 
 
 
