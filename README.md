@@ -217,7 +217,7 @@ plt.xlabel ("Sepal length (cm's)")
 plt.savefig("sepal_length_hist.png")
 ```
 
-
+This was the result of the histograms. 
 
 ![](https://github.com/kaob1991/pands-project2021/blob/9c70edab987160cd77c697b3552a550faefbc415/petal_length_hist.png)
 
@@ -226,6 +226,8 @@ plt.savefig("sepal_length_hist.png")
 ![](https://github.com/kaob1991/pands-project2021/blob/9c70edab987160cd77c697b3552a550faefbc415/sepal_length_hist.png)
 
 ![](https://github.com/kaob1991/pands-project2021/blob/9c70edab987160cd77c697b3552a550faefbc415/sepal_width_hist.png)
+
+
 
 ## REFERENCES:
 
@@ -293,10 +295,20 @@ plt.savefig("sepal_length_hist.png")
  21. Pearson, E. (1951). Biometrika, 38(1/2), 257-259. doi:10.2307/2332332
         (retrieved 10/04/21 @ 14.03)
      
- 22. Janert, PK 2010, Data Analysis with Open Source Tools : A Hands-On Guide for Programmers and Data Scientists, O'Reilly Media, Incorporated, Sebastopol. Available from: ProQuest Ebook Central. [10 April 2021].
+ 22. Janert, PK 2010, Data Analysis with Open Source Tools : A Hands-On Guide for Programmers and Data Scientists, O'Reilly Media, Incorporated, Sebastopol. Available        from: ProQuest Ebook Central. [10 April 2021].
 
-23. https://methods.sagepub.com/base/download/DatasetHowToGuide/partial-correlation-in-fishers-iris-1936
+ 23. https://methods.sagepub.com/base/download/DatasetHowToGuide/partial-correlation-in-fishers-iris-1936
         (retrieved 10/04/21 @ 14.38)
     
  24. https://towardsdatascience.com/eda-of-the-iris-dataset-190f6dfd946d
- 25.     (retrieved 10/04/21 @ 18.16)
+        (retrieved 10/04/21 @ 18.16)
+        
+ 25. https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html
+        (retieved 10/04/21 @ 20.39)
+        
+ 26. https://medium.com/@morganjonesartist/color-guide-to-seaborn-palettes-da849406d44f
+        (retrieved 10/04/21 @ 20.40)
+
+
+
+
