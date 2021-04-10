@@ -219,7 +219,13 @@ plt.savefig("sepal_length_hist.png")
 
 
 
+![](https://github.com/kaob1991/pands-project2021/blob/9c70edab987160cd77c697b3552a550faefbc415/petal_length_hist.png)
 
+![](https://github.com/kaob1991/pands-project2021/blob/9c70edab987160cd77c697b3552a550faefbc415/petal_width_hist.png)
+
+![](https://github.com/kaob1991/pands-project2021/blob/9c70edab987160cd77c697b3552a550faefbc415/sepal_length_hist.png)
+
+![](https://github.com/kaob1991/pands-project2021/blob/9c70edab987160cd77c697b3552a550faefbc415/sepal_width_hist.png)
 
 ## REFERENCES:
 
