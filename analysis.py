@@ -66,17 +66,32 @@ print (iris.corr(), file = out)
 print ("", file = out)
 print ("", file = out)
 
+# Demonstrating a heatmap for correlation above 
+# (ref:https://towardsdatascience.com/eda-of-the-iris-dataset-190f6dfd946d)
 
-# Demonstrating the correlation within each individual species
+fig = plt.figure(figsize = (8,3))
+sns.heatmap(iris.corr(),cmap = "Blues", annot = True)
+plt.show()
+
+# Demonstrating the correlation within each individual species and creating heatmaps for each
 print ("Correlation table within the Iris Setosa species", file = out)
 print (iris_set.corr(), file = out)
 print ("", file = out)
+fig = plt.figure(figsize = (8,3))
+sns.heatmap(iris_set.corr(),cmap = "Reds", annot = True)
+plt.show()
 print ("Correlation table within the Iris Versicolor species", file = out)
 print (iris_ver.corr(), file = out)
 print ("", file = out)
+fig = plt.figure(figsize = (8,3))
+sns.heatmap(iris_ver.corr(),cmap = "Greens", annot = True)
+plt.show()
 print ("Correlation table within the Iris Virginica species", file = out)
 print (iris_vir.corr(), file = out)
 print ("", file = out)
+fig = plt.figure(figsize = (8,3))
+sns.heatmap(iris_vir.corr(),cmap = "Purples", annot = True)
+plt.show()
 
 
 
