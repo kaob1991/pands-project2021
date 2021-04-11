@@ -190,10 +190,11 @@ print ("", file = out)
 
 ![](https://github.com/kaob1991/pands-project2021/blob/6da0bdda0f840ea5d1822a0d7f661993d4b0421c/species%20correlation.png)
 
+Iris Setosa:
 ![](https://github.com/kaob1991/pands-project2021/blob/ad0507feffa779bbc51e5fa42189a926e07067ae/heatmap_setosa.png)
-
+Iris Versicolor:
 ![](https://github.com/kaob1991/pands-project2021/blob/ad0507feffa779bbc51e5fa42189a926e07067ae/heatmap_versicolor.png)
-
+Iris Virginica:
 ![](https://github.com/kaob1991/pands-project2021/blob/ad0507feffa779bbc51e5fa42189a926e07067ae/heatmap_virginica.png)
 
 The results show the following:
