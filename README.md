@@ -1,7 +1,6 @@
 # PANDS-Project 2021
 Project work as part of PANDS module
 
-Test for chorme os git
 
 
 
@@ -236,6 +235,8 @@ This was the result of the histograms.
 
 ![](https://github.com/kaob1991/pands-project2021/blob/9c70edab987160cd77c697b3552a550faefbc415/sepal_width_hist.png)
 
+
+Looking at the distribution of the curve in the first variable (The petal length) it can be seen that the curve is 
 
 
 ## REFERENCES:
