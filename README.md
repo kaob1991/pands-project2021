@@ -236,9 +236,9 @@ This was the result of the histograms.
 ![](https://github.com/kaob1991/pands-project2021/blob/9c70edab987160cd77c697b3552a550faefbc415/sepal_width_hist.png)
 
 
-Looking at the distribution of the curve in the first variable (The petal length) it can be seen that the curve is 
+Looking at the distribution of the curve in the first variable (The petal length) it can be seen that the curve is multimodal (i.e. it has 2 peaks) and the data is predominantly skewed to the right. The data of the variables in petal width follow no distribution curve and the data for the sepal length follows a very weak normal distribution. However the curve for the sepal width follows a normal distribution. 
 
-
+Following some reasearch into this distribution I discovered that the multimodal distribution was possibly a indication that the data needed to be further split into the relative species in order to fully determine the relationship see reference no 28). Therefore I then ran a histogram of each variable split by species to check the distribution at this point. I used seaborn for this as I saw a nice example of a histogram that neatly displayed the various differences (see reference no. 27) 
 ## REFERENCES:
 
 1. Https://en.wikipedia.org/wiki/Iris_flower_data_set 
@@ -318,7 +318,10 @@ Looking at the distribution of the curve in the first variable (The petal length
         
  26. https://medium.com/@morganjonesartist/color-guide-to-seaborn-palettes-da849406d44f
         (retrieved 10/04/21 @ 20.40)
-
-
-
+        
+ 27. https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d
+        (retrieved 15/04/21 @ 13.37) 
+        
+ 28. https://support.minitab.com/en-us/minitab-express/1/help-and-how-to/graphs/histogram/interpret-the-results/key-results/
+        (retrieved 15/04/91 @ 13.54)  
 
