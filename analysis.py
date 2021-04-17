@@ -124,8 +124,8 @@ plt.xlabel ("Petal width (cm's)")
 
 plt.suptitle ("Variable Distribution")
 plt.tight_layout()
-plt.show ()
-#plt.savefig("variable_histograms.png")
+#plt.show ()
+plt.savefig("variable_histograms.png")
 
 
 # Next I wanted to run a histogram splitting the variables by species in order to see the distribution correctly 
