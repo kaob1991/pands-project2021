@@ -324,4 +324,7 @@ Following some reasearch into this distribution I discovered that the multimodal
         
  28. https://support.minitab.com/en-us/minitab-express/1/help-and-how-to/graphs/histogram/interpret-the-results/key-results/
         (retrieved 15/04/91 @ 13.54)  
-
+        
+ 29. https://matplotlib.org/3.1.1/gallery/subplots_axes_and_figures/demo_tight_layout.html   
+       (retrieved 17/04/821 @ 17.37)
+ 30. 
