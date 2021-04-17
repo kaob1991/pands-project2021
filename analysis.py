@@ -92,7 +92,7 @@ print ("", file = out)
 fig = plt.figure(figsize = (8,3))
 sns.heatmap(iris_vir.corr(),cmap = "Purples", annot = True)
 plt.show()
-'''
+
 
 #Creating a histogram for each variable and save it to a png file
 plt.subplot (2,2,1)
@@ -168,9 +168,9 @@ plt.hist(iris_vir ["sepallength"], alpha = 0.5, label = "Iris Virginica", color 
 plt.xlabel ("Sepal Length (cm's)")
 plt.ylabel ("Frequency")
 plt.tight_layout()
-plt.show()
+
 plt.savefig ("variable_species_histograms.png")
 
-'''
+
 
 
