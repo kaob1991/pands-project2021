@@ -224,13 +224,14 @@ plt.ylabel ("Frequency")
 plt.xlabel ("Petal width (cm's)")
 #plt.show()
 plt.suptitle ("Histogram of the variables")
+plt.tight_layout()
 plt.savefig("variable_histograms.png")
 
 ```
 
 This was the result of the histograms. 
 
-![](https://github.com/kaob1991/pands-project2021/blob/31b1f8a58f3d973048cb5650bd59db76c317b0ac/variable_histograms.png)
+![](https://github.com/kaob1991/pands-project2021/blob/717cf3044507dbdd461905b2c5ed8950e684072c/variable_histograms.png)
 
 
 Looking at the distribution of the curve in the first variable (The petal length) it can be seen that the curve is multimodal (i.e. it has 2 peaks) and the data is predominantly skewed to the right. The data of the variables in petal width follow no distribution curve and the data for the sepal length follows a very weak normal distribution. However the curve for the sepal width follows a normal distribution. 
