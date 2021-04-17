@@ -217,28 +217,50 @@ Following the summary analysis I then moved onto plotting the variables using a 
 I used the following sample code, making changes to color and labels as appropriate to adequately differentiate the variables. 
 
 ```python
-plt.hist(iris["sepallength"], color = "b")
-plt.title ("Sepal Length")
-plt.ylabel ("Count")
-plt.xlabel ("Sepal length (cm's)")
+
+plt.showplt.subplot(2,4,4)
+plt.hist(iris["petalwidth"], color = "m")
+plt.ylabel ("Frequency")
+plt.xlabel ("Petal width (cm's)")
 #plt.show()
-plt.savefig("sepal_length_hist.png")
+plt.suptitle ("Histogram of the variables")
+plt.savefig("variable_histograms.png")
+
 ```
 
 This was the result of the histograms. 
 
-![](https://github.com/kaob1991/pands-project2021/blob/9c70edab987160cd77c697b3552a550faefbc415/petal_length_hist.png)
-
-![](https://github.com/kaob1991/pands-project2021/blob/9c70edab987160cd77c697b3552a550faefbc415/petal_width_hist.png)
-
-![](https://github.com/kaob1991/pands-project2021/blob/9c70edab987160cd77c697b3552a550faefbc415/sepal_length_hist.png)
-
-![](https://github.com/kaob1991/pands-project2021/blob/9c70edab987160cd77c697b3552a550faefbc415/sepal_width_hist.png)
+![](https://github.com/kaob1991/pands-project2021/blob/31b1f8a58f3d973048cb5650bd59db76c317b0ac/variable_histograms.png)
 
 
 Looking at the distribution of the curve in the first variable (The petal length) it can be seen that the curve is multimodal (i.e. it has 2 peaks) and the data is predominantly skewed to the right. The data of the variables in petal width follow no distribution curve and the data for the sepal length follows a very weak normal distribution. However the curve for the sepal width follows a normal distribution. 
 
-Following some reasearch into this distribution I discovered that the multimodal distribution was possibly a indication that the data needed to be further split into the relative species in order to fully determine the relationship see reference no 28). Therefore I then ran a histogram of each variable split by species to check the distribution at this point. I used seaborn for this as I saw a nice example of a histogram that neatly displayed the various differences (see reference no. 27) 
+Following some research into this distribution I discovered that the multimodal distribution was possibly a indication that the data needed to be further split into the relative species in order to fully determine the relationship see reference no 28). Therefore I then ran a histogram of each variable split by species to check the distribution at this point (see reference no. 27), using the sample code below: 
+
+```python
+plt.subplot(2,2,4)
+plt.hist(iris_set["sepallength"], alpha = 0.75, label = "Iris Setosa", color = "m")
+plt.hist(iris_ver["sepallength"], alpha = 0.5, label = "Iris Versicolour", color = "b")
+plt.hist(iris_vir ["sepallength"], alpha = 0.5, label = "Iris Virginica", color = "g")
+plt.xlabel ("Sepal Length (cm's)")
+plt.ylabel ("Frequency")
+plt.tight_layout()
+plt.savefig ("variable_species_histograms.png")
+
+```
+
+
+
+This produced the following histogram, showing the variables split by species: 
+
+![](https://github.com/kaob1991/pands-project2021/blob/c9db70603eeefeb7a5ac18a33bca46be1250870b/variable_species_histograms.png)
+
+
+
+This gives a much clearer idea of what is going on with the individual species and looking at the image we can see that there is a normal distribution pattern amongst a number of species when looking at the variables. 
+
+
+
 ## REFERENCES:
 
 1. Https://en.wikipedia.org/wiki/Iris_flower_data_set 
@@ -312,19 +334,19 @@ Following some reasearch into this distribution I discovered that the multimodal
     
  24. https://towardsdatascience.com/eda-of-the-iris-dataset-190f6dfd946d
         (retrieved 10/04/21 @ 18.16)
-        
+     
  25. https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html
         (retieved 10/04/21 @ 20.39)
-        
+     
  26. https://medium.com/@morganjonesartist/color-guide-to-seaborn-palettes-da849406d44f
         (retrieved 10/04/21 @ 20.40)
-        
+     
  27. https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d
         (retrieved 15/04/21 @ 13.37) 
-        
+     
  28. https://support.minitab.com/en-us/minitab-express/1/help-and-how-to/graphs/histogram/interpret-the-results/key-results/
         (retrieved 15/04/91 @ 13.54)  
-        
+     
  29. https://matplotlib.org/3.1.1/gallery/subplots_axes_and_figures/demo_tight_layout.html   
        (retrieved 17/04/821 @ 17.37)
  30. 
