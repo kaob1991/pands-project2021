@@ -350,4 +350,7 @@ This gives a much clearer idea of what is going on with the individual species a
      
  29. https://matplotlib.org/3.1.1/gallery/subplots_axes_and_figures/demo_tight_layout.html   
        (retrieved 17/04/821 @ 17.37)
- 30. 
+       
+ 30. https://datavizpyr.com/overlapping-histograms-with-matplotlib-in-python/
+       (retrieved 17/04/21 @ 20.18)
+       
