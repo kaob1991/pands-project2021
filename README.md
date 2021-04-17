@@ -68,7 +68,7 @@ All of the above were pre-installed in python using anaconda.
   
   ```
 
-  I also created the output file:
+  I also created the output file, which I have set to overwrite each time the program is run:
    ``` python 
    out = open("summary_file_text_output.txt", "w")
    ```
@@ -258,7 +258,24 @@ This produced the following histogram, showing the variables split by species:
 
 
 
-This gives a much clearer idea of what is going on with the individual species and looking at the image we can see that there is a normal distribution pattern amongst a number of species when looking at the variables. 
+This gives a much clearer idea of what is going on with the individual species and looking at the image we can see that there is a normal distribution pattern amongst a number of species when looking at the variables. Looking at the relationship between the 3 variables it is very clear that, as mentioned at the beginning the Iris Setosa is linearly seperable from the others when looking at the Petals. The Sepals are also normally distributed in both width and length. 
+The other 2 species are both noramlly distributed as well, but there are siginificant amounts of overlap, particularly in the Sepal. The petal's appear to be less so with the Virginica species clearly averaging a slightly larger size. 
+
+
+While histogram's give a great overview of the data itself, they do not plot the individual datapoints, so for that we need to use a scatterplot to see the relationship between the variables. 
+
+### Further Detailed Analysis 
+
+Scatterplots are a quick and simple way to look at the relationship between the variables, and easier for the inexperienced user to interpret the data. 
+
+We will run a scatterplot between each variable and set the code to output a .png file for convenience. I researched whether to use ```plt.plot``` or ```plt.scatter``` and as we are going to be running all 3 varieties of Iris in the dataset we will be using ```plt.scatter``` as it offers the added colour customisation that we need to clearly demonstrate the data (see reference no. 31). 
+
+```
+plt. 
+
+
+
+```
 
 
 
@@ -353,4 +370,9 @@ This gives a much clearer idea of what is going on with the individual species a
        
  30. https://datavizpyr.com/overlapping-histograms-with-matplotlib-in-python/
        (retrieved 17/04/21 @ 20.18)
+ 
+ 31. https://jakevdp.github.io/PythonDataScienceHandbook/04.02-simple-scatter-plots.html
+       (retrieved 17/04/21 @ 20.47)
        
+ 32. https://kanoki.org/2020/08/30/matplotlib-scatter-plot-color-by-category-in-python/
+        (retrieved 17/04/21 @ 21.04)
