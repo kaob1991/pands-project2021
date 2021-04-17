@@ -92,7 +92,7 @@ print ("", file = out)
 fig = plt.figure(figsize = (8,3))
 sns.heatmap(iris_vir.corr(),cmap = "Purples", annot = True)
 plt.show()
-
+'''
 
 #Creating a histogram for each variable and save it to a png file
 plt.subplot (2,2,1)
@@ -116,15 +116,17 @@ plt.xlabel ("Sepal width (cm's)")
 #plt.show()
 
 
-plt.subplot(2,4,4)
+plt.subplot(2,2,4)
 plt.hist(iris["petalwidth"], color = "m")
 plt.ylabel ("Frequency")
 plt.xlabel ("Petal width (cm's)")
-#plt.show()
-plt.suptitle ("Histogram of the variables")
-plt.savefig("variable_histograms.png")
-'''
 
+plt.tight_layout()
+plt.suptitle ("Variable Distribution")
+#plt.show ()
+plt.savefig("variable_histograms.png")
+
+'''
 # Next I wanted to run a histogram splitting the variables by species in order to see the distribution correctly 
 
 
@@ -169,6 +171,6 @@ plt.tight_layout()
 plt.show()
 plt.savefig ("variable_species_histograms.png")
 
-
+'''
 
 
