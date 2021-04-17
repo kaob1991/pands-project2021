@@ -95,42 +95,79 @@ plt.show()
 
 
 #Creating a histogram for each variable and save it to a png file
+plt.subplot (2,2,1)
 plt.hist(iris["sepallength"], color = "b")
-plt.title ("Sepal Length")
-plt.ylabel ("Count")
+plt.ylabel ("Frequency")
 plt.xlabel ("Sepal length (cm's)")
 #plt.show()
-plt.savefig("sepal_length_hist.png")
 
 
+plt.subplot (2,2,2)
 plt.hist(iris["petallength"],color = "r")
-plt.title ("Petal Length")
-plt.ylabel ("Count")
+plt.ylabel ("Frequency")
 plt.xlabel ("Petal length (cm's)")
 #plt.show()
-plt.savefig("petal_length_hist.png")
 
 
+plt.subplot (2,2,3)
 plt.hist(iris["sepalwidth"], color = "g")
-plt.title ("Sepal Width")
-plt.ylabel ("Count")
+plt.ylabel ("Frequency")
 plt.xlabel ("Sepal width (cm's)")
 #plt.show()
-plt.savefig("sepal_width_hist.png")
 
-'''
+
+plt.subplot(2,4,4)
 plt.hist(iris["petalwidth"], color = "m")
-plt.title ("Petal Width")
-plt.ylabel ("Count")
+plt.ylabel ("Frequency")
 plt.xlabel ("Petal width (cm's)")
 #plt.show()
-plt.savefig("petal_width_hist.png")
+plt.suptitle ("Histogram of the variables")
+plt.savefig("variable_histograms.png")
+'''
+
+# Next I wanted to run a histogram splitting the variables by species in order to see the distribution correctly 
 
 
+plt.suptitle ("Variable Distribution When Split By Species")
+
+plt.subplot(2,2,1)
+
+plt.hist(iris_set["petalwidth"], alpha = 0.75, label = "Iris Setosa", color = "m")
+plt.hist(iris_ver["petalwidth"], alpha = 0.5, label = "Iris Versicolour", color = "b")
+plt.hist(iris_vir ["petalwidth"], alpha = 0.5, label = "Iris Virginica", color = "g")
+plt.xlabel ("Petal Width")
+plt.ylabel ("Count")
+plt.legend (loc = "best")
+
+plt.subplot(2,2,2)
+
+plt.hist(iris_set["petallength"], alpha = 0.75, label = "Iris Setosa", color = "m")
+plt.hist(iris_ver["petallength"], alpha = 0.5, label = "Iris Versicolour", color = "b")
+plt.hist(iris_vir ["petallength"], alpha = 0.5, label = "Iris Virginica", color = "g")
+plt.xlabel ("Petal Length")
+plt.ylabel ("Frequency")
+ #(bbox_to_anchor= (0,1.02,2,0.2), loc = "lower left", mode = "expand", borderaxespad = 0, ncol = 3)
+#0,1.02,1,0.2
 
 
+plt.subplot(2,2,3)
+
+plt.hist(iris_set["sepalwidth"], alpha = 0.75, label = "Iris Setosa", color = "m")
+plt.hist(iris_ver["sepalwidth"], alpha = 0.5, label = "Iris Versicolour", color = "b")
+plt.hist(iris_vir ["sepalwidth"], alpha = 0.5, label = "Iris Virginica", color = "g")
+plt.xlabel ("Sepal Width (cm's)")
+plt.ylabel ("Frequency")
 
 
+plt.subplot(2,2,4)
+plt.hist(iris_set["sepallength"], alpha = 0.75, label = "Iris Setosa", color = "m")
+plt.hist(iris_ver["sepallength"], alpha = 0.5, label = "Iris Versicolour", color = "b")
+plt.hist(iris_vir ["sepallength"], alpha = 0.5, label = "Iris Virginica", color = "g")
+plt.xlabel ("Sepal Length (cm's)")
+plt.ylabel ("Frequency")
+plt.tight_layout()
+plt.show()
+plt.savefig ("variable_species_histograms.png")
 
 
 
