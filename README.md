@@ -18,7 +18,7 @@ Image showing different species included in the data set and items measured in t
 
 ​	(Source:https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5)
 
-This dataset is commonly used for machine learning, particularly in statistical classification techniques across multiple disciplines. It is widely considered to be a good option for illustrating problems in the areas of statistical graphics, multivariate statistics and machine learning. The UCI machine learning repository, often considered the source of the "true" dataset, contains well over 200 papers and books referencing the use of the dataset.  It comprises of real, good quality data, in a small but meaningful dataset which offers a simple but challenging task of discriminating between various types. In fact it is so popular that the dataset is readily available through the scikit-learn package, used in machine learning. 
+This dataset is commonly used for machine learning, particularly in statistical classification techniques across multiple disciplines. It is widely considered to be a good option for illustrating problems in the areas of statistical graphics, multivariate statistics and machine learning. The UCI machine learning repository, often considered the source of the "true" dataset, contains well over 200 papers and books referencing the use of the dataset.  It comprises of real, good quality data, in a small but meaningful dataset. This offers a simple but challenging task of discriminating between various types. In fact it is so popular that the dataset is readily available through the scikit-learn package, used in machine learning. 
 
 
 
@@ -69,6 +69,7 @@ All of the above were pre-installed in python using anaconda.
   ```
 
   I also created the output file, which I have set to overwrite each time the program is run:
+  
    ``` python 
    out = open("summary_file_text_output.txt", "w")
    ```
@@ -77,13 +78,12 @@ All of the above were pre-installed in python using anaconda.
 
  ### Basic Analysis
 
- I ran ```shape()``` to get the parameters of the data file, important for understanding the scope of the dataframe.
+ I ran ```shape()``` to get the parameters of the data file, important for understanding the scope of the dataframe. It's also important to ensure that the correct dataset is in use as there are many variants of the dataset around and using a different version will produce incorrect outputs.
 
  ``` python
  print ("This is the shape of the datafile:\n(first number denotes the number of rows, the second the number of columns)", file = out)
 print (iris.shape, file = out)
-print ("",file = out)
-print ("", file = out)
+
  ```
 
 This returned the following output which demonstrates that the datafile is 150 rows and 5 columns wide: 
@@ -100,8 +100,7 @@ This returned the following output which demonstrates that the datafile is 150 r
 
 print("General layout of Fisher's Iris datafile:", file = out)
 print(iris.head(5), file = out)
-print ("", file = out)
-print ("", file = out)
+
 ```
 
 Which returns the following details: 
@@ -115,8 +114,7 @@ Running the data through ```describe()``` returned a basic numerical summary of 
 ```python
 print("Numerical summary of the datatypes:", file = out)
 print(iris.describe(), file = out)
-print ("", file = out)
-print ("", file = out)
+
 ```
 
 This returned the following: 
@@ -136,14 +134,13 @@ iris_vir = iris.loc [iris ["class"] == "Iris-virginica" ]
 
 print ("Numerical summary of the Iris Setosa", file = out)
 print (iris_set.describe(), file = out)
-print ("", file = out)
+
 print ("Numerical summary of the Iris Versicolor", file = out)
 print (iris_ver.describe(), file = out)
-print ("", file = out)
+
 print ("Numerical summary of the Iris Virginica", file = out)
 print (iris_vir.describe(), file = out)
-print ("", file = out)
-print ("", file = out)
+
 ```
 
 This returns the output for each individual species types: 
@@ -158,6 +155,7 @@ Finally, I completed a correlation on the datafile using ```corr()``` to demonst
 ```python
 print ("Correlation table between the various data types:", file = out)
 print (iris.corr(), file = out) 
+
 ```
 
 The results are as follows: 
@@ -166,7 +164,9 @@ The results are as follows:
 
 
 Looking at the data, it shows a high level of correlation between petal length and petal width (.962757) and also, to a lesser extent, between sepal length and petal length (.871754); and sepal length and petal width (.817954). We shall explore the following data further in the plotting investigations below. 
+
 Following some external research I decided to also run a heatmap to better display the levels of correlation in a more visually accessible matter (see reference number 24 below). 
+
 ``` python
 fig = plt.figure(figsize = (15,9))
 sns.heatmap(iris_df.corr(), cmap = "Blues", annot = True)
@@ -180,13 +180,13 @@ I also ran a correlation on the individual species' variables to explore the lev
 
 print ("Correlation table within the Iris Setosa species", file = out)
 print (iris_set.corr(), file = out)
-print ("", file = out)
+
 print ("Correlation table within the Iris Versicolor species", file = out)
 print (iris_ver.corr(), file = out)
-print ("", file = out)
+
 print ("Correlation table within the Iris Virginica species", file = out)
 print (iris_vir.corr(), file = out)
-print ("", file = out)
+
 ```
 
 ![](https://github.com/kaob1991/pands-project2021/blob/6da0bdda0f840ea5d1822a0d7f661993d4b0421c/species%20correlation.png)
@@ -205,6 +205,7 @@ Iris Virginica:
 
 
 The results show the following:
+
 - Low/Moderate levels of correlation in Iris Setosa between the variables with the exception of the sepal width and length (.746780)
 - High level of correlation in Iris versicolor between the petal length and petal width (.786668) and petal length and sepal length (.754049)
 - Low/ Moderate levels of correlation in Irish Virginica between the variables with the exception of petal length and sepal length (.864225)
@@ -213,12 +214,13 @@ The results show the following:
 
 ### Plotting Analysis
 
-Following the summary analysis I then moved onto plotting the variables using a histogram. This will display the variables in a plot that shows the frequency that individual variables appear in the dataframe. 
+Following the summary analysis I then moved onto plotting the variables using a histogram. This will display the variables in an easy-to-read graphic that shows the frequency that individual variables appear in the dataframe. 
+
 I used the following sample code, making changes to color and labels as appropriate to adequately differentiate the variables. 
 
 ```python
 
-plt.showplt.subplot(2,4,4)
+plt.subplot(2,2,4)
 plt.hist(iris["petalwidth"], color = "m")
 plt.ylabel ("Frequency")
 plt.xlabel ("Petal width (cm's)")
@@ -234,9 +236,17 @@ This was the result of the histograms.
 ![](https://github.com/kaob1991/pands-project2021/blob/717cf3044507dbdd461905b2c5ed8950e684072c/variable_histograms.png)
 
 
-Looking at the distribution of the curve in the first variable (The petal length) it can be seen that the curve is multimodal (i.e. it has 2 peaks) and the data is predominantly skewed to the right. The data of the variables in petal width follow no distribution curve and the data for the sepal length follows a very weak normal distribution. However the curve for the sepal width follows a normal distribution. 
+Looking at the distribution of the curves:
+- In 'petal length' it can be seen that the curve is multimodal (i.e. it has 2 peaks) and the data is predominantly skewed to the left. 
 
-Following some research into this distribution I discovered that the multimodal distribution was possibly a indication that the data needed to be further split into the relative species in order to fully determine the relationship see reference no 28). Therefore I then ran a histogram of each variable split by species to check the distribution at this point (see reference no. 27), using the sample code below: 
+- The data of the variables in 'petal width' follows no clear distribution curve
+
+- The data for 'sepal length' follows a very weak normal distribution. 
+
+- The curve for the 'sepal width' follows a normal distribution. 
+
+Following some research into this distribution I discovered that the multimodal distribution was possibly a indication that the data needed to be further split into the relative species in order to fully determine the relationship (see reference no 28).
+Therefore I then ran a histogram of each variable split by species to check the distribution at this point (see reference no. 27), using the sample code below: 
 
 ```python
 plt.subplot(2,2,4)
@@ -271,13 +281,15 @@ Scatterplots are a quick and simple way to look at the relationship between the 
 We will run a scatterplot between each variable and set the code to output a .png file for convenience. I researched whether to use ```plt.plot``` or ```plt.scatter``` and as we are going to be running all 3 varieties of Iris in the dataset we will be using ```plt.scatter``` as it offers the added colour customisation that we need to clearly demonstrate the data (see reference no. 31). 
 
 ```
-plt. 
+plt.
 
 
 
 ```
 
+### Conclusion 
 
+THis is where you want to write about why you should use python over excel, etc for analysing data. 
 
 ## REFERENCES:
 
@@ -376,3 +388,7 @@ plt.
        
  32. https://kanoki.org/2020/08/30/matplotlib-scatter-plot-color-by-category-in-python/
         (retrieved 17/04/21 @ 21.04)
+ 
+ 33. https://www.ck12.org/book/ck-12-probability-and-statistics-concepts/section/4.6/
+        (retrieved 18/04/21 @ 17.40)
+        
