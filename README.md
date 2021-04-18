@@ -69,7 +69,7 @@ All of the above were pre-installed in python using anaconda.
   ```
 
   I also created the output file, which I have set to overwrite each time the program is run:
-  
+
    ``` python 
    out = open("summary_file_text_output.txt", "w")
    ```
@@ -287,6 +287,18 @@ plt.
 
 ```
 
+![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/SWidthSLength.png)
+
+![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/SlengthPlength.png)
+
+![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/SlengthPwidth.png)
+
+![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/SwidthPlength.png)
+
+![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/SwidthPwidth.png)
+
+### ![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/PwidthPlength.png)
+
 ### Conclusion 
 
 THis is where you want to write about why you should use python over excel, etc for analysing data. 
@@ -379,16 +391,16 @@ THis is where you want to write about why you should use python over excel, etc 
      
  29. https://matplotlib.org/3.1.1/gallery/subplots_axes_and_figures/demo_tight_layout.html   
        (retrieved 17/04/821 @ 17.37)
-       
+     
  30. https://datavizpyr.com/overlapping-histograms-with-matplotlib-in-python/
        (retrieved 17/04/21 @ 20.18)
- 
+
  31. https://jakevdp.github.io/PythonDataScienceHandbook/04.02-simple-scatter-plots.html
        (retrieved 17/04/21 @ 20.47)
-       
+     
  32. https://kanoki.org/2020/08/30/matplotlib-scatter-plot-color-by-category-in-python/
         (retrieved 17/04/21 @ 21.04)
- 
+
  33. https://www.ck12.org/book/ck-12-probability-and-statistics-concepts/section/4.6/
         (retrieved 18/04/21 @ 17.40)
-        
+     
