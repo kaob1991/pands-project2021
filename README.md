@@ -280,25 +280,40 @@ Scatterplots are a quick and simple way to look at the relationship between the 
 
 We will run a scatterplot between each variable and set the code to output a .png file for convenience. I researched whether to use ```plt.plot``` or ```plt.scatter``` and as we are going to be running all 3 varieties of Iris in the dataset we will be using ```plt.scatter``` as it offers the added colour customisation that we need to clearly demonstrate the data (see reference no. 31). 
 
-```
-plt.
+``` python
+plt.xlabel ("Petal Width")
+plt.ylabel ("petal Length")
+sns.scatterplot(z, w , data = iris, hue = "class")
+plt.savefig ("PwidthPlength.png")
 
 
 
 ```
 
+Sepal Width + Length: 
 ![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/SWidthSLength.png)
 
+
+Sepal length + Petal length:
 ![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/SlengthPlength.png)
 
+
+Sepal length + Petal width:
 ![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/SlengthPwidth.png)
 
+
+Sepal width + Petal length:
 ![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/SwidthPlength.png)
 
+
+Sepal Width and Petal width:
 ![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/SwidthPwidth.png)
 
+Petal width and Petal length:
 ### ![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/PwidthPlength.png)
 
+
+Looking at the above it is easy to see whether a relationship exists between the variables depending on how close the individual dots are to an imaginary diagonal line that runs from lower left to top right. 
 ### Conclusion 
 
 THis is where you want to write about why you should use python over excel, etc for analysing data. 
