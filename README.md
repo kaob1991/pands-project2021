@@ -220,14 +220,16 @@ I used the following sample code, making changes to color and labels as appropri
 
 ```python
 
-plt.subplot(2,2,4)
-plt.hist(iris["petalwidth"], color = "m")
-plt.ylabel ("Frequency")
-plt.xlabel ("Petal width (cm's)")
-#plt.show()
-plt.suptitle ("Histogram of the variables")
-plt.tight_layout()
-plt.savefig("variable_histograms.png")
+def hist_var (n, variable, col, x_label,):
+    plt.subplot(2,2,n)
+    plt.hist(iris[variable], color = col)
+    plt.ylabel ("Frequency")
+    plt.xlabel (x_label)
+    plt.suptitle ("Variable Distribution")
+    plt.tight_layout()
+#plt.show ()
+    plt.savefig("variable_histograms.png")
+hist_var (1, "sepallength", "b", "Sepal Length")
 
 ```
 
@@ -249,14 +251,18 @@ Following some research into this distribution I discovered that the multimodal 
 Therefore I then ran a histogram of each variable split by species to check the distribution at this point (see reference no. 27), using the sample code below: 
 
 ```python
-plt.subplot(2,2,4)
-plt.hist(iris_set["sepallength"], alpha = 0.75, label = "Iris Setosa", color = "m")
-plt.hist(iris_ver["sepallength"], alpha = 0.5, label = "Iris Versicolour", color = "b")
-plt.hist(iris_vir ["sepallength"], alpha = 0.5, label = "Iris Virginica", color = "g")
-plt.xlabel ("Sepal Length (cm's)")
-plt.ylabel ("Frequency")
-plt.tight_layout()
-plt.savefig ("variable_species_histograms.png")
+
+def hist_func (n ,variable, x_label):
+    plt.suptitle ("Variable Distribution When Split by Species")
+    plt.subplot(2,2,n)
+    plt.hist(iris_set[variable], alpha = 0.75, label = "Iris Setosa", color = "m")
+    plt.hist(iris_ver[variable], alpha = 0.5, label = "Iris Versicolour", color = "b")
+    plt.hist(iris_vir [variable], alpha = 0.5, label = "Iris Virginica", color = "g")
+    plt.xlabel (x_label)
+    plt.ylabel ("Frequency")
+    plt.tight_layout()
+    plt.savefig ("variable_species_histogram.png")
+hist_func (1, "petalwidth", "Petal Width (cm's)")
 
 ```
 
@@ -278,17 +284,20 @@ While histogram's give a great overview of the data itself, they do not plot the
 
 Scatterplots are a quick and simple way to look at the relationship between the variables, and easier for the inexperienced user to interpret the data. 
 
-We will run a scatterplot between each variable and set the code to output a .png file for convenience. I researched whether to use ```plt.plot``` or ```plt.scatter``` and as we are going to be running all 3 varieties of Iris in the dataset we will be using ```plt.scatter``` as it offers the added colour customisation that we need to clearly demonstrate the data (see reference no. 31). 
+We will run a scatterplot between each variable and set the code to output a .png file for convenience. I researched whether to use ```plt.plot``` or ```plt.scatter``` and as we are going to be running all 3 varieties of Iris in the dataset we will be using ```plt.scatter``` as it offers the added colour customisation that we need to clearly demonstrate the data (see reference no. 31). A sample of code used is below: 
 
 ``` python
-plt.xlabel ("Petal Width")
-plt.ylabel ("petal Length")
-sns.scatterplot(z, w , data = iris, hue = "class")
-plt.savefig ("PwidthPlength.png")
 
-
+def scatter_func (x_name,y_name,x_variable,y_variable,output_name):
+   plt.xlabel (x_name)
+   plt.ylabel (y_name)
+   sns.scatterplot (x_variable, y_variable , data = iris, hue = "class") #This works
+   plt.savefig(output_name)
+scatter_func ("Sepal Length", "Petal Length", "sepallength", "petallength", "SlengthPlength.png")
 
 ```
+This resulted in the following scatterplots: 
+
 
 Sepal width + Sepal length: 
 
@@ -345,12 +354,29 @@ When we look at the scatterplots from our data there are a number of relationshi
       There is a strong positive correlation between the data in this scatterplot. The data points for Iris Setosa and Versicolor are tightly packed around the diagonal,       while Virginica is slightly less densely packed, suggesting a greater variation in the data gathered for that particular species. 
       
       
-While Scatterplots are a great way to see the data clearly presented there a number of other ways to present the data. For example ```sns.lmplot``` offers a linear regression model which plots the data as the scatterplots above, but overlays a overplot line on the data to make the linear regression clearer. An example of this data is shown below and is a helpful way of visualising the data further. The other 5 plots relevant to the data are available in the repository for viewing if required. 
+While Scatterplots are a great way to see the data clearly presented there a number of other ways to present the data. For example ```sns.lmplot``` offers a linear regression model which plots the data as the scatterplots above, but overlays a overplot line on the data to make the linear regression clearer. An example of this data is shown below and is a helpful way of visualising the data further. The other 5 plots relevant to the data are available in the repository for viewing if required. The sample code is below: 
 
+``` python 
+def lm_plot( x_value, y_value,output_file):
+    sns.lmplot (x = x_value, y = y_value, data = iris,height = 8,  hue = "class", scatter_kws = {"s": 50})
+    plt.savefig (output_file)
+lm_plot("sepallength", "petallength", "lm_1.png")
+```
+
+We can see with this graph it gives a linear regression model allowing the relationship with the data to be clearly shown: 
 ![](https://github.com/kaob1991/pands-project2021/blob/816989d460976bee9092167c9b946230b4a2ed54/lm_1.png)
 
-Another way is to present the data as a boxplot/swarm plot and this allows the data to be displayed in a clear and concise matter. The visualisation draws attention to the data in the following manner: 
+Another way is to present the data as a boxplot/swarm plot and this allows the data to be displayed in a clear and concise matter. The visualisation draws attention to the data in the following manner. The sample code used is below: 
 
+```python 
+
+def swarmbox_plt(n, variable):
+    plt. subplot (2,2,n)
+    sns.boxplot(x = "class", y = variable, data = iris)
+    sns.swarmplot( x = "class", y = variable, data = iris, size = 1, color = "m")
+swarmbox_plt(1, "petalwidth")
+```
+The images below demonstrate the data from petal length; and an overview plot. The overview plot is difficult to see and as a result I have included the other 3 plots in the repository for analysis. 
 ![](https://github.com/kaob1991/pands-project2021/blob/9628aad3deac12fa662b2e2e4bc670f1261f6a96/boxplot_petal_l.png)
 
 ![](https://github.com/kaob1991/pands-project2021/blob/9628aad3deac12fa662b2e2e4bc670f1261f6a96/box_swarm_plot.png)
@@ -358,7 +384,12 @@ Another way is to present the data as a boxplot/swarm plot and this allows the d
 
 
 
-Finally the presentation of the data as a pair plot graph is both concise and visually striking. The use of seaborn allows the data to be presented in a easy to read manner and is equally straightforward in its display of the scatterplot and histogram data. 
+Finally the presentation of the data as a pair plot graph is both concise and visually striking. The use of seaborn allows the data to be presented in a easy to read manner and is equally straightforward in its display of the scatterplot and histogram data. The code used is equally straightforward and is demonstrated below: 
+
+```python 
+figurepairplot = sns.pairplot(data = iris, kind = "scatter", hue = "class") 
+plt.savefig ("pair-plot")
+```
 
 ![](https://github.com/kaob1991/pands-project2021/blob/9628aad3deac12fa662b2e2e4bc670f1261f6a96/pair-plot.png)
 
@@ -470,3 +501,6 @@ THis is where you want to write about why you should use python over excel, etc 
      
  34. https://stackoverflow.com/questions/34796451/changing-the-marker-size-in-python-seaborn-lmplot
 	(retrieved 19/04/21 @ 18.00)
+
+ 35. https://www.geeksforgeeks.org/python-seaborn-swarmplot-method/
+ 	(retrieved 19/04/21 @ 18.25)
