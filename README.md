@@ -60,7 +60,7 @@ All of the above were pre-installed in python using anaconda.
 
 ### Dataset 
 
- The dataset was retrieved from https://archive.ics.uci.edu/ml/datasets/iris as a csv (comma seperated values) file and imported into the program as follows: 
+ The dataset was retrieved from https://archive.ics.uci.edu/ml/datasets/iris as a csv (comma separated values) file and imported into the program as follows: 
 
   ``` python
   
@@ -78,7 +78,7 @@ All of the above were pre-installed in python using anaconda.
 
  ### Basic Analysis
 
- I ran ```shape()``` to get the parameters of the data file, important for understanding the scope of the dataframe. It's also important to ensure that the correct dataset is in use as there are many variants of the dataset around and using a different version will produce incorrect outputs.
+ I ran ```shape()``` to get the parameters of the data file, important for understanding the scope of the data frame. It's also important to ensure that the correct dataset is in use as there are many variants of the dataset around and using a different version will produce incorrect outputs.
 
  ``` python
  print ("This is the shape of the datafile:\n(first number denotes the number of rows, the second the number of columns)", file = out)
@@ -110,7 +110,7 @@ Which returns the following details:
 We can see from the output it shows that there are 5 variables, and 4 of them are of type float (sepal length, sepal width, petal length, petal width), and one string which is the species type (class). 
 
 
-Running the data through ```describe()``` returned a basic numerical summary of the data containing the mean, max, standard deviation etc of the data file 
+Running the data through ```describe()``` returned a basic numerical summary of the data containing the mean, max, standard deviation etc. of the data file 
 ```python
 print("Numerical summary of the datatypes:", file = out)
 print(iris.describe(), file = out)
@@ -214,7 +214,7 @@ The results show the following:
 
 ### Plotting Analysis
 
-Following the summary analysis I then moved onto plotting the variables using a histogram. This will display the variables in an easy-to-read graphic that shows the frequency that individual variables appear in the dataframe. 
+Following the summary analysis I then moved onto plotting the variables using a histogram. This will display the variables in an easy-to-read graphic that shows the frequency that individual variables appear in the data frame. 
 
 I used the following sample code, making changes to color and labels as appropriate to adequately differentiate the variables. 
 
@@ -268,11 +268,11 @@ This produced the following histogram, showing the variables split by species:
 
 
 
-This gives a much clearer idea of what is going on with the individual species and looking at the image we can see that there is a normal distribution pattern amongst a number of species when looking at the variables. Looking at the relationship between the 3 variables it is very clear that, as mentioned at the beginning the Iris Setosa is linearly seperable from the others when looking at the Petals. The Sepals are also normally distributed in both width and length. 
-The other 2 species are both noramlly distributed as well, but there are siginificant amounts of overlap, particularly in the Sepal. The petal's appear to be less so with the Virginica species clearly averaging a slightly larger size. 
+This gives a much clearer idea of what is going on with the individual species and looking at the image we can see that there is a normal distribution pattern amongst a number of species when looking at the variables. Looking at the relationship between the 3 variables it is very clear that, as mentioned at the beginning the Iris Setosa is linearly separable from the others when looking at the Petals. The Sepals are also normally distributed in both width and length. 
+The other 2 species are both normally distributed as well, but there are significant amounts of overlap, particularly in the Sepal. The petal's appear to be less so with the Virginica species clearly averaging a slightly larger size. 
 
 
-While histogram's give a great overview of the data itself, they do not plot the individual datapoints, so for that we need to use a scatterplot to see the relationship between the variables. 
+While histogram's give a great overview of the data itself, they do not plot the individual data points, so for that we need to use a scatterplot to see the relationship between the variables. 
 
 ### Further Detailed Analysis 
 
@@ -331,31 +331,38 @@ When we look at the scatterplots from our data there are a number of relationshi
 
   2) Sepal length and Petal length:
       There appears to be a positive linear relationship between the variables overall. However, looking at the data for each species shows that Iris Setosa has no             relationship between the variables (the data is in a relatively straight line across the graph). Versicolor and Virginica have a strong positive correlation             between the variables. 
-  
+
   3) Sepal length and Petal width:
       There is a weak positive correlation with the variables in this dataset overall. The individual species all appear to have a weak positive relationship but again,       the Iris Setosa has the weakest with the data only slightly showing a positive correlation. 
-   
+
   4) Sepal width and Petal length:
       There is a weak positive correlation between these 2 data variables, only in Versicolor and Virginica. The data points are rather spread out suggesting a wide           range of variation in the data. Iris Setosa again have no correlation between the variables.
-   
+
   5) Sepal width and petal width:
       There is a weak positive correlation between these 2 data variables, but like the scatterplot above, only with Versicolor and Virginica. The data points are spread       out suggesting a wide range of data variation. Iris Setosa appears to have no correlation between the variables, as above. 
-   
+
   6) Petal width and Petal length:
-      There is a strong positive correlation between the data in this scatterplot. The data points for Iris Setosa and Versicolor are tightly packed around the diagonal,       while Virginica is slightly less densly packed, suggesting a greater variation in the data gathered for that particular species. 
+      There is a strong positive correlation between the data in this scatterplot. The data points for Iris Setosa and Versicolor are tightly packed around the diagonal,       while Virginica is slightly less densely packed, suggesting a greater variation in the data gathered for that particular species. 
       
       
-While Scatterplots are a great way to see the data clearly presented there a number of other ways to present the data. For example ```sns.lmplot``` offers a linear regression model which plots the data as the scatterplots above, but overlays a overplot line on the data to make the linear regression clearer. An example of this data is shown below and is a helpful way of visualising the data further. 
-  
-  
-Another way is to present the data as a boxplot/swarmplot and this allows the data to be displayed in a clear and concise matter. The visualisation draws attention to the data in the following manner: 
+While Scatterplots are a great way to see the data clearly presented there a number of other ways to present the data. For example ```sns.lmplot``` offers a linear regression model which plots the data as the scatterplots above, but overlays a overplot line on the data to make the linear regression clearer. An example of this data is shown below and is a helpful way of visualising the data further. The other 5 plots relevant to the data are available in the repository for viewing if required. 
+
+![](https://github.com/kaob1991/pands-project2021/blob/816989d460976bee9092167c9b946230b4a2ed54/lm_1.png)
+
+Another way is to present the data as a boxplot/swarm plot and this allows the data to be displayed in a clear and concise matter. The visualisation draws attention to the data in the following manner: 
+
+![](https://github.com/kaob1991/pands-project2021/blob/9628aad3deac12fa662b2e2e4bc670f1261f6a96/boxplot_petal_l.png)
+
+![](https://github.com/kaob1991/pands-project2021/blob/9628aad3deac12fa662b2e2e4bc670f1261f6a96/box_swarm_plot.png)
 
 
-Finally the presentation of the data as a pairplot graph is both consise and visually striking. The use of seaborn allows the data to be presented in a easy to read manner and is equally straightforward in its display of the scatterplot and histogram data. 
 
 
+Finally the presentation of the data as a pair plot graph is both concise and visually striking. The use of seaborn allows the data to be presented in a easy to read manner and is equally straightforward in its display of the scatterplot and histogram data. 
 
-  
+![](https://github.com/kaob1991/pands-project2021/blob/9628aad3deac12fa662b2e2e4bc670f1261f6a96/pair-plot.png)
+
+
 ### Conclusion 
 
 THis is where you want to write about why you should use python over excel, etc for analysing data. 
