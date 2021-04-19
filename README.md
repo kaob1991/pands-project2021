@@ -291,26 +291,36 @@ plt.savefig ("PwidthPlength.png")
 ```
 
 Sepal Width + Length: 
+
 ![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/SWidthSLength.png)
 
 
+
 Sepal length + Petal length:
+
 ![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/SlengthPlength.png)
 
 
+
 Sepal length + Petal width:
+
 ![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/SlengthPwidth.png)
 
 
 Sepal width + Petal length:
+
 ![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/SwidthPlength.png)
 
 
+
 Sepal Width and Petal width:
+
 ![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/SwidthPwidth.png)
 
+
 Petal width and Petal length:
-### ![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/PwidthPlength.png)
+
+![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/PwidthPlength.png)
 
 
 Looking at the above it is easy to see whether a relationship exists between the variables depending on how close the individual dots are to an imaginary diagonal line that runs from lower left to top right. 
