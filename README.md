@@ -345,7 +345,16 @@ When we look at the scatterplots from our data there are a number of relationshi
       There is a strong positive correlation between the data in this scatterplot. The data points for Iris Setosa and Versicolor are tightly packed around the diagonal,       while Virginica is slightly less densly packed, suggesting a greater variation in the data gathered for that particular species. 
       
       
-  While Scatterplots are a great way to see the data clearly presented there a number of other ways to present the data. 
+While Scatterplots are a great way to see the data clearly presented there a number of other ways to present the data. For example ```sns.lmplot``` offers a linear regression model which plots the data as the scatterplots above, but overlays a overplot line on the data to make the linear regression clearer. An example of this data is shown below and is a helpful way of visualising the data further. 
+  
+  
+Another way is to present the data as a boxplot/swarmplot and this allows the data to be displayed in a clear and concise matter. The visualisation draws attention to the data in the following manner: 
+
+
+Finally the presentation of the data as a pairplot graph is both consise and visually striking. The use of seaborn allows the data to be presented in a easy to read manner and is equally straightforward in its display of the scatterplot and histogram data. 
+
+
+
   
 ### Conclusion 
 
