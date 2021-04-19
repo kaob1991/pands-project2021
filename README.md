@@ -461,3 +461,5 @@ THis is where you want to write about why you should use python over excel, etc 
  33. https://www.ck12.org/book/ck-12-probability-and-statistics-concepts/section/4.6/
         (retrieved 18/04/21 @ 17.40)
      
+ 34. https://stackoverflow.com/questions/34796451/changing-the-marker-size-in-python-seaborn-lmplot
+	(retrieved 19/04/21 @ 18.00)
