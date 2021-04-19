@@ -96,120 +96,65 @@ plt.show()
 
 #Creating a histogram for each variable and save it to a png file
 
-plt.subplot (2,2,1)
-plt.hist(iris["sepallength"], color = "b")
-plt.ylabel ("Frequency")
-plt.xlabel ("Sepal length (cm's)")
-#plt.show()
 
-plt.subplot (2,2,2)
-plt.hist(iris["petallength"],color = "r")
-plt.ylabel ("Frequency")
-plt.xlabel ("Petal length (cm's)")
-#plt.show()
 
-plt.subplot (2,2,3)
-plt.hist(iris["sepalwidth"], color = "g")
-plt.ylabel ("Frequency")
-plt.xlabel ("Sepal width (cm's)")
-#plt.show()
-
-plt.subplot(2,2,4)
-plt.hist(iris["petalwidth"], color = "m")
-plt.ylabel ("Frequency")
-plt.xlabel ("Petal width (cm's)")
-
-plt.suptitle ("Variable Distribution")
-plt.tight_layout()
+def hist_var (n, variable, col, x_label,):
+    plt.subplot(2,2,n)
+    plt.hist(iris[variable], color = col)
+    plt.ylabel ("Frequency")
+    plt.xlabel (x_label)
+    plt.suptitle ("Variable Distribution")
+    plt.tight_layout()
 #plt.show ()
-plt.savefig("variable_histograms.png")
+    plt.savefig("variable_histograms.png")
+
+hist_var (1, "sepallength", "b", "Sepal Length")
+hist_var (2, "petallength", "r", "Petal Length")
+hist_var (3, "sepalwidth", "g", "Sepal Width")
+hist_var (4, "petalwidth", "m", "Petal Width")
 
 
 # Next I wanted to run a histogram splitting the variables by species in order to see the distribution correctly 
 
-plt.suptitle ("Variable Distribution When Split By Species")
-
-plt.subplot(2,2,1)
-plt.hist(iris_set["petalwidth"], alpha = 0.75, label = "Iris Setosa", color = "m")
-plt.hist(iris_ver["petalwidth"], alpha = 0.5, label = "Iris Versicolour", color = "b")
-plt.hist(iris_vir ["petalwidth"], alpha = 0.5, label = "Iris Virginica", color = "g")
-plt.xlabel ("Petal Width")
-plt.ylabel ("Count")
-plt.legend (loc = "best")
-
-plt.subplot(2,2,2)
-plt.hist(iris_set["petallength"], alpha = 0.75, label = "Iris Setosa", color = "m")
-plt.hist(iris_ver["petallength"], alpha = 0.5, label = "Iris Versicolour", color = "b")
-plt.hist(iris_vir ["petallength"], alpha = 0.5, label = "Iris Virginica", color = "g")
-plt.xlabel ("Petal Length")
-plt.ylabel ("Frequency")
-
-plt.subplot(2,2,3)
-plt.hist(iris_set["sepalwidth"], alpha = 0.75, label = "Iris Setosa", color = "m")
-plt.hist(iris_ver["sepalwidth"], alpha = 0.5, label = "Iris Versicolour", color = "b")
-plt.hist(iris_vir ["sepalwidth"], alpha = 0.5, label = "Iris Virginica", color = "g")
-plt.xlabel ("Sepal Width (cm's)")
-plt.ylabel ("Frequency")
-
-plt.subplot(2,2,4)
-plt.hist(iris_set["sepallength"], alpha = 0.75, label = "Iris Setosa", color = "m")
-plt.hist(iris_ver["sepallength"], alpha = 0.5, label = "Iris Versicolour", color = "b")
-plt.hist(iris_vir ["sepallength"], alpha = 0.5, label = "Iris Virginica", color = "g")
-plt.xlabel ("Sepal Length (cm's)")
-plt.ylabel ("Frequency")
-plt.tight_layout()
-plt.savefig ("variable_species_histograms.png")
 
 
 
 
+def hist_func (n ,variable, x_label):
+    plt.suptitle ("Variable Distribution When Split by Species")
+    plt.subplot(2,2,n)
+    plt.hist(iris_set[variable], alpha = 0.75, label = "Iris Setosa", color = "m")
+    plt.hist(iris_ver[variable], alpha = 0.5, label = "Iris Versicolour", color = "b")
+    plt.hist(iris_vir [variable], alpha = 0.5, label = "Iris Virginica", color = "g")
+    plt.xlabel (x_label)
+    plt.ylabel ("Frequency")
+    plt.tight_layout()
+    plt.savefig ("variable_species_histogram.png")
 
-figurepairplot = sns.pairplot(data = iris, kind = "scatter", hue = "class") # This needs its color fixing - all blue atm 
+hist_func (1, "petalwidth", "Petal Width (cm's)")
+hist_func (2, "petallength", "Petal length (cm's)")
+hist_func (3, "sepalwidth", "Sepal Width (cm's)")
+hist_func (4, "sepallength", "Sepal Length (cm's)")
+
+
+
+figurepairplot = sns.pairplot(data = iris, kind = "scatter", hue = "class") 
 plt.savefig ("pair-plot")
-
-
 sns.lmplot (x = "petallength", y = "petalwidth", data = iris)
 plt.savefig ("l_model_petal")
 sns.lmplot (x = "sepallength", y = "sepalwidth", data = iris)
 plt.savefig ("l_model_sepal") # linear model research needed 
+def scatter_func (x_name,y_name,x_variable,y_variable,output_name):
+   plt.xlabel (x_name)
+   plt.ylabel (y_name)
+   sns.scatterplot (x_variable, y_variable , data = iris, hue = "class") #This works
+   plt.savefig(output_name)
+
+scatter_func ("Sepal Length", "Petal Length", "sepallength", "petallength", "SlengthPlength.png")
+scatter_func ("Sepal Length", "Sepal Width", "sepallength", "sepalwidth", "SwidthSlength.png")
+scatter_func ("Petal Length", "Petal Width", "petallength", "petalwidth", "PwidthPlength.png")
+scatter_func ("Sepal Width", "Petal Length", "sepalwidth", "petallength", "SwidthPlength.png")
+scatter_func ("Sepal Width", "Petal Width", "sepalwidth", "petalwidth", "SwidthPwidth.png")
+scatter_func ("Sepal Length", "Petal Width", "sepallength", "petalwidth", "SlengthPwidth.png") 
 '''
-
-w = "petallength"
-x = "sepallength"
-y = "sepalwidth"
-z = "petalwidth"
-'''
-plt.xlabel ("Sepal Length")
-plt.ylabel ("Sepal Width")
-sns.scatterplot (x, y , data = iris, hue = "class") #This works
-plt.savefig("SWidthSLength.png")
-
-plt.xlabel ("Sepal Length")
-plt.ylabel ("Petal Length")
-sns.scatterplot (x, w , data = iris, hue = "class")
-plt.savefig ("SlengthPlength.png")
-
-plt.xlabel ("Sepal Length")
-plt.ylabel ("Petal Width")
-sns.scatterplot (x, z , data = iris, hue = "class")
-plt.savefig ("SlengthPwidth.png")
-
-plt.xlabel ("Sepal Width")
-plt.ylabel ("Petal Width")
-sns.scatterplot (y , z, data = iris, hue = "class")
-plt.savefig ("SwidthPwidth.png")
-
-plt.xlabel ("Sepal Width")
-plt.ylabel ("Petal Length")
-sns.scatterplot (y, w , data = iris, hue = "class")
-plt.savefig ("SwidthPlength.png")
-
-plt.xlabel ("Petal Width")
-plt.ylabel ("Petal length")
-sns.scatterplot (z , w , data = iris, hue = "class")
-plt.savefig ("PwidthPlength.png")
-
-'''
-
-
 
