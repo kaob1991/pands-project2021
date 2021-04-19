@@ -25,30 +25,30 @@ out = open("summary_file_text_output.txt", "w")
 
 # Using shape () to get the size and shape of the datafile, confirming the number of
 # rows in the dataset is 150 as expected 
-'''
+
 print ("This is the shape of the datafile:\n(first number denotes the number of rows, the second the number of columns)", file = out)
 print (iris.shape, file = out)
 print ("",file = out)
 print ("", file = out)
-'''
+
 
 # And demonstrating the layout of the datafile 
 
-'''
+
 print("General layout of Fisher's Iris datafile:", file = out)
 print(iris.head(5), file = out)
 print ("", file = out)
 print ("", file = out)
-'''
+
 
 #This provides a numerical summary of the data including mean max std etc 
 
-'''
+
 print("Numerical summary of the datatypes:", file = out)
 print(iris.describe(), file = out)
 print ("", file = out)
 print ("", file = out)
-'''
+
 
 #dividing the dataset into the corresponding datatypes 
 
@@ -59,7 +59,7 @@ iris_vir = iris.loc [iris ["class"] == "Iris-virginica" ]
 
 # running a summary of the data sorted by datatype 
 
-'''
+
 print ("Numerical summary of the Iris Setosa", file = out)
 print (iris_set.describe(), file = out)
 print ("", file = out)
@@ -70,16 +70,16 @@ print ("Numerical summary of the Iris Virginica", file = out)
 print (iris_vir.describe(), file = out)
 print ("", file = out)
 print ("", file = out)
-'''
+
 
 # Demonstrating the correlation between the various variable types 
 
-'''
+
 print ("Correlation table between the various data types:", file = out)
 print (iris.corr(), file = out) 
 print ("", file = out)
 print ("", file = out)
-'''
+
 
 # Demonstrating a heatmap for correlation above 
 # (ref:https://towardsdatascience.com/eda-of-the-iris-dataset-190f6dfd946d)
@@ -92,22 +92,29 @@ plt.show()
 
 # Demonstrating the correlation within each individual species and creating heatmaps for each
 
-'''
+
 print ("Correlation table within the Iris Setosa species", file = out)
 print (iris_set.corr(), file = out)
 print ("", file = out)
+'''
 fig = plt.figure(figsize = (8,3))
 sns.heatmap(iris_set.corr(),cmap = "Reds", annot = True)
 plt.show()
+'''
+
 print ("Correlation table within the Iris Versicolor species", file = out)
 print (iris_ver.corr(), file = out)
 print ("", file = out)
+'''
 fig = plt.figure(figsize = (8,3))
 sns.heatmap(iris_ver.corr(),cmap = "Greens", annot = True)
 plt.show()
+'''
+
 print ("Correlation table within the Iris Virginica species", file = out)
 print (iris_vir.corr(), file = out)
 print ("", file = out)
+'''
 fig = plt.figure(figsize = (8,3))
 sns.heatmap(iris_vir.corr(),cmap = "Purples", annot = True)
 plt.show()
