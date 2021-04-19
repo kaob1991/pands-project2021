@@ -290,7 +290,7 @@ plt.savefig ("PwidthPlength.png")
 
 ```
 
-Sepal Width + Length: 
+Sepal width + Sepal length: 
 
 ![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/SWidthSLength.png)
 
@@ -313,7 +313,7 @@ Sepal width + Petal length:
 
 
 
-Sepal Width and Petal width:
+Sepal width and Petal width:
 
 ![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/SwidthPwidth.png)
 
@@ -323,7 +323,30 @@ Petal width and Petal length:
 ![](https://github.com/kaob1991/pands-project2021/blob/f7b14c092f5a3eb72ddfc7f58704ec8a05c55174/PwidthPlength.png)
 
 
-Looking at the above it is easy to see whether a relationship exists between the variables depending on how close the individual dots are to an imaginary diagonal line that runs from lower left to top right. 
+Looking at the above it is easy to see whether a relationship exists between the variables depending on how close the individual dots come to form an imaginary diagonal line that runs on the graph. If the line starts in the bottom left to top right it can be said to have a positive linear correlation; and if it starts in the bottom right to top left then it can be said to have a negative  linear correlation. The more spread out the dots from this line, the weaker the correlation. 
+
+When we look at the scatterplots from our data there are a number of relationships shown. A summary of the results is below :
+  1) Sepal Width and Sepal Length:
+      There appears to be no clear relationship when looking at the variables as an overall. Iris Setosa and Versicolor have a weak positive relationship between the 2         variables
+
+  2) Sepal length and Petal length:
+      There appears to be a positive linear relationship between the variables overall. However, looking at the data for each species shows that Iris Setosa has no             relationship between the variables (the data is in a relatively straight line across the graph). Versicolor and Virginica have a strong positive correlation             between the variables. 
+  
+  3) Sepal length and Petal width:
+      There is a weak positive correlation with the variables in this dataset overall. The individual species all appear to have a weak positive relationship but again,       the Iris Setosa has the weakest with the data only slightly showing a positive correlation. 
+   
+  4) Sepal width and Petal length:
+      There is a weak positive correlation between these 2 data variables, only in Versicolor and Virginica. The data points are rather spread out suggesting a wide           range of variation in the data. Iris Setosa again have no correlation between the variables.
+   
+  5) Sepal width and petal width:
+      There is a weak positive correlation between these 2 data variables, but like the scatterplot above, only with Versicolor and Virginica. The data points are spread       out suggesting a wide range of data variation. Iris Setosa appears to have no correlation between the variables, as above. 
+   
+  6) Petal width and Petal length:
+      There is a strong positive correlation between the data in this scatterplot. The data points for Iris Setosa and Versicolor are tightly packed around the diagonal,       while Virginica is slightly less densly packed, suggesting a greater variation in the data gathered for that particular species. 
+      
+      
+  While Scatterplots are a great way to see the data clearly presented there a number of other ways to present the data. 
+  
 ### Conclusion 
 
 THis is where you want to write about why you should use python over excel, etc for analysing data. 
