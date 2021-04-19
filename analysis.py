@@ -177,9 +177,9 @@ scatter_func ("Sepal Length", "Petal Width", "sepallength", "petalwidth", "Sleng
 '''
 
 #linear regression model plot function w/outputs 
-'''
+
 def lm_plot( x_value, y_value,output_file):
-    sns.lmplot (x = x_value, y = y_value, data = iris, hue = "class")
+    sns.lmplot (x = x_value, y = y_value, data = iris,height = 8,  hue = "class", scatter_kws = {"s": 50})
     plt.savefig (output_file)
 lm_plot("sepallength", "petallength", "lm_1.png")
 lm_plot("sepallength", "sepalwidth", "lm_2.png")
@@ -187,7 +187,7 @@ lm_plot("petallength", "petalwidth", "lm_3.png")
 lm_plot("sepalwidth", "petallength", "lm_4.png")
 lm_plot("sepalwidth", "petalwidth", "lm_5.png")
 lm_plot("sepallength", "petalwidth", "lm_6.png")
-'''
+
 
 # boxplot/swarmplot
 
