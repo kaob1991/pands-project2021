@@ -478,7 +478,7 @@ The above data analysis shows how easy it is to quickly and concisely display a 
  21. Pearson, E. (1951). Biometrika, 38(1/2), 257-259. doi:10.2307/2332332
         (retrieved 10/04/21 @ 14.03)
      
- 22. Janert, PK 2010, Data Analysis with Open Source Tools : A Hands-On Guide for Programmers and Data Scientists, O'Reilly Media, Incorporated, Sebastopol. Available        from: ProQuest Ebook Central. [10 April 2021].
+ 22. Janert, PK 2010, Data Analysis with Open Source Tools : A Hands-On Guide for Programmers and Data Scientists, O'Reilly Media, Incorporated, Sebastopol. Available        from: ProQuest Ebook Central. (retrieved 10/04/21 @ 14.16)
 
  23. https://methods.sagepub.com/base/download/DatasetHowToGuide/partial-correlation-in-fishers-iris-1936
         (retrieved 10/04/21 @ 14.38)
