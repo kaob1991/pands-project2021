@@ -68,17 +68,17 @@ All of the above were pre-installed in python using anaconda.
   
   ```
 
-  I also created the output file, which I have set to overwrite each time the program is run:
+  The output file was also created, which is set to overwrite each time the program is run:
 
    ``` python 
    out = open("summary_file_text_output.txt", "w")
    ```
 
- At this point I also performed a sanity check to ensure that there was no issues with the import of the libraries and to ensure that the read in of the dataset was problem-free.
+ At this point a sanity check was also performed to ensure that there was no issues with the import of the libraries and to ensure that the read in of the dataset was problem-free.
 
  ### Basic Analysis
 
- I ran ```shape()``` to get the parameters of the data file, important for understanding the scope of the data frame. It's also important to ensure that the correct dataset is in use as there are many variants of the dataset around and using a different version will produce incorrect outputs.
+```shape()``` was ran to get the parameters of the data file, important for understanding the scope of the data frame. It's also important to ensure that the correct dataset is in use as there are many variants of the dataset around and using a different version will produce incorrect outputs.
 
  ``` python
  print ("This is the shape of the datafile:\n(first number denotes the number of rows, the second the number of columns)", file = out)
@@ -94,7 +94,7 @@ This returned the following output which demonstrates that the datafile is 150 r
 
 
 
- I also used ```head()``` to demonstrate the layout of the file, and the various names of the variables 
+```head()``` was also used to demonstrate the layout of the file, and the various names of the variables 
 
 ``` python
 
@@ -124,7 +124,7 @@ This returned the following:
 Looking at the Standard Deviation we can see that it is relatively low for 3 of the 4 variable types ( petal width, sepal length, sepal width) with a number below 1. However the petal length has a higher standard deviation suggesting that there is more variability in the measurements of this particular variable than the others.
 
 
-I established 3 different variable types ( 1 for each species of the flower) and also ran a numerical summary of each individual species, again using ```describe()```
+3 different variable types were then established ( 1 for each species of the flower) and a numerical summary of each individual species was run, again using ```describe()```
 
 ```python
 iris_set = iris.loc [iris ["class"] == "Iris-setosa"]
@@ -150,7 +150,7 @@ This returns the output for each individual species types:
 It gives a nice idea of the average real-life sizes of the flowers. It can be seen that, on average, the Iris Setosa has a large sepal compared to the petal, whereas the Iris Virginica and Versicolor's petals and sepals are closer in size. 
 
 
-Finally, I completed a correlation on the datafile using ```corr()``` to demonstrate the relationship between the variables. This produces the relationship between them on a scale between 0 and 1, with 0 being no relationship detected, and 1 being a perfect correlation. 
+Finally, a correlation was run as were the levels of skewness, and kurtosis, on the datafile using ```corr()```, ```iris.kurt()```, and ```iris.skew()``` to demonstrate the relationship between the variables. This produces the relationship between them on a scale between 0 and 1, with 0 being no relationship detected, and 1 being a perfect correlation. 
 
 ```python
 print ("Correlation table between the various data types:", file = out)
@@ -165,7 +165,7 @@ The results are as follows:
 
 Looking at the data, it shows a high level of correlation between petal length and petal width (.962757) and also, to a lesser extent, between sepal length and petal length (.871754); and sepal length and petal width (.817954). We shall explore the following data further in the plotting investigations below. 
 
-Following some external research I decided to also run a heatmap to better display the levels of correlation in a more visually accessible matter (see reference number 24 below). 
+Following some external research it was decided to also run a heatmap to better display the levels of correlation in a more visually accessible matter (see reference number 24 below). 
 
 ``` python
 fig = plt.figure(figsize = (15,9))
@@ -174,7 +174,7 @@ sns.heatmap(iris_df.corr(), cmap = "Blues", annot = True)
 
 ![](https://github.com/kaob1991/pands-project2021/blob/ad0507feffa779bbc51e5fa42189a926e07067ae/heatmap_correlation.png)
 
-I also ran a correlation on the individual species' variables to explore the levels of correlation within, and again added heatmaps for ease of visibility. 
+A correlation was also ran on the individual species' variables to explore the levels of correlation within, and again, heatmaps were added for for ease of visibility. 
 
 ```python
 
@@ -214,9 +214,9 @@ The results show the following:
 
 ### Plotting Analysis
 
-Following the summary analysis I then moved onto plotting the variables using a histogram. This will display the variables in an easy-to-read graphic that shows the frequency that individual variables appear in the data frame. 
+Following the summary analysis the variables were then plotted using a histogram. This will display the variables in an easy-to-read graphic that shows the frequency that individual variables appear in the data frame. 
 
-I used the following sample code, making changes to color and labels as appropriate to adequately differentiate the variables. 
+The following sample code was used, making changes to color and labels as appropriate to adequately differentiate the variables. 
 
 ```python
 
@@ -247,8 +247,8 @@ Looking at the distribution of the curves:
 
 - The curve for the 'sepal width' follows a normal distribution. 
 
-Following some research into this distribution I discovered that the multimodal distribution was possibly a indication that the data needed to be further split into the relative species in order to fully determine the relationship (see reference no 28).
-Therefore I then ran a histogram of each variable split by species to check the distribution at this point (see reference no. 27), using the sample code below: 
+Following some research into this distribution it was discovered that the multimodal distribution was possibly a indication that the data needed to be further split into the relative species in order to fully determine the relationship (see reference no 28).
+Therefore a histogram of each variable was then ran, split by species to check the distribution at this point (see reference no. 27), using the sample code below: 
 
 ```python
 
@@ -284,7 +284,7 @@ While histogram's give a great overview of the data itself, they do not plot the
 
 Scatterplots are a quick and simple way to look at the relationship between the variables, and easier for the inexperienced user to interpret the data. 
 
-We will run a scatterplot between each variable and set the code to output a .png file for convenience. I researched whether to use ```plt.plot``` or ```plt.scatter``` and as we are going to be running all 3 varieties of Iris in the dataset we will be using ```plt.scatter``` as it offers the added colour customisation that we need to clearly demonstrate the data (see reference no. 31). A sample of code used is below: 
+We will run a scatterplot between each variable and set the code to output a .png file for convenience. Following research on whether to use ```plt.plot``` or ```plt.scatter``` it was decided that as we are going to be running all 3 varieties of Iris in the dataset we will be using ```plt.scatter```, as it offers the added colour customisation that we need to clearly demonstrate the data (see reference no. 31). A sample of code used is below: 
 
 ``` python
 
@@ -366,7 +366,7 @@ lm_plot("sepallength", "petallength", "lm_1.png")
 We can see with this graph it gives a linear regression model allowing the relationship with the data to be clearly shown: 
 ![](https://github.com/kaob1991/pands-project2021/blob/816989d460976bee9092167c9b946230b4a2ed54/lm_1.png)
 
-Another way is to present the data as a boxplot/swarm plot and this allows the data to be displayed in a clear and concise matter. The visualisation draws attention to the data in the following manner. The sample code used is below: 
+Another way is to present the data as a boxplot overaid with a swarm plot and this allows the data to be displayed in a clear and concise matter. The visualisation draws attention to the data in the following manner. The sample code used is below: 
 
 ```python 
 
@@ -381,10 +381,12 @@ The images below demonstrate the data from petal length; and an overview plot. T
 
 ![](https://github.com/kaob1991/pands-project2021/blob/9628aad3deac12fa662b2e2e4bc670f1261f6a96/box_swarm_plot.png)
 
+Boxplots give a good indication of how the data values are spread out. It uses the box to demonstrate the IQR (Interquartile range) between the 25th and 75th percentile, with the vertical lines ("whiskers") representing the data to the "maximum" and "minimum" horizontal lines on both sides. 
+
+Swarm plots (also called beeswarm plots, as they can sometimes resemble swarming bees),are useful to show all datapoints with some respresentation of underlying distribution. They are similar to strip-plots but the points are adjusted so that they don't overlap. 
 
 
-
-Finally the presentation of the data as a pair plot graph is both concise and visually striking. The use of seaborn allows the data to be presented in a easy to read manner and is equally straightforward in its display of the scatterplot and histogram data. The code used is equally straightforward and is demonstrated below: 
+Finally the presentation of the data as a pair plot graph is both concise and visually striking. The use of seaborn allows the data to be presented in a easy to read manner and is equally straightforward in its display of the scatterplot and histogram data. It produces a matrix of relationships between each variable in the dataset for an instant examination of the data, even allows the data to be split by species type. The code used is equally straightforward and is demonstrated below: 
 
 ```python 
 figurepairplot = sns.pairplot(data = iris, kind = "scatter", hue = "class") 
@@ -396,7 +398,13 @@ plt.savefig ("pair-plot")
 
 ### Conclusion 
 
-THis is where you want to write about why you should use python over excel, etc for analysing data. 
+There are many reasons to use Python over other software and coding packages that are available. Having had previous personal experience with IBM's SPSS (Statistical Package for Social Sciences) in previous studies I found the use of python in this case to be highly customisable, to an extent far greater than I had previously experienced.
+Python provides a huge range of extremely powerful packages such as NumPy,Pandas, seaborn, and matplotlib that make it incredibly simple to code complex data analytics problems. 
+It's also easy to use and understand. Having never used Python prior to the beginning of this module I found the use of the packages such as matplotlib exceptionally straightforward. Its also much quicker at completing the analysis than the likes of SPSS or Excel. 
+Another benefit of using Python over something like excel or SPSS is reproducibility. This both saves time, and ensures consistency. As the programmer has control over the code being written, reproducing the same data is easier, be that with the same dataset, an updated one, or even different sets when looking for the same analysis to be run. The downside to using something like excel is that to receive the same data output the data analysist has to manually complete (and remember) the sequence of steps that they took when originally performing the analysis. 
+
+The above data analysis shows how easy it is to quickly and concisely display a dataset in a graphical display which allows for analysis of the data with minimal effort. There is plenty of analysis avaialble on the Iris dataset and research (including the references listed below) provided some interesting inspiration for the analysis above. 
+
 
 ## REFERENCES:
 
@@ -504,3 +512,9 @@ THis is where you want to write about why you should use python over excel, etc 
 
  35. https://www.geeksforgeeks.org/python-seaborn-swarmplot-method/
  	(retrieved 19/04/21 @ 18.25)
+	
+ 36. https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51
+ 	(retrieved 24/04/21 @ 14.20)
+ 
+ 37. https://www.kite.com/python/docs/seaborn.swarmplot
+ 	(retrieved 24/04/21 @ 14.21) 
