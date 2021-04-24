@@ -517,17 +517,13 @@ The above data analysis shows how easy it is to quickly and concisely display a 
 	(retrieved 19/04/21 @ 18.00)
 
  35. https://www.geeksforgeeks.org/python-seaborn-swarmplot-method/
-
- 	(retrieved 19/04/21 @ 18.25)
+	(retrieved 19/04/21 @ 18.25)
 
  36. https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51
-
- 	(retrieved 24/04/21 @ 14.20)
+	(retrieved 24/04/21 @ 14.20)
 
  37. https://www.kite.com/python/docs/seaborn.swarmplot
-
- 	(retrieved 24/04/21 @ 14.21) 
+	(retrieved 24/04/21 @ 14.21) 
 
  38. https://www.reddit.com/r/datascience/comments/8ggvx4/why_python_over_excel/
-
- 	(retrieved 24/04/21 @ 19.28)
+	(retrieved 24/04/21 @ 19.28)
