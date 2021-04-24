@@ -56,7 +56,7 @@ This dataset is commonly used for machine learning, particularly in statistical 
 
 - ```matplotlib``` is a module for static, interactive & animated visualisations allowing high levels of customisation and the embedding of plots into applications; and   pyplot provides a MATLAB-like interface within this module. 
 
-All of the above were pre-installed in python using anaconda. 
+All of the above were pre-installed in python using anaconda, and the code was written using VSCode. 
 
 ### Dataset 
 
