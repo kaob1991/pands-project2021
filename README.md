@@ -1,6 +1,8 @@
 # PANDS-Project 2021
-Project work as part of PANDS module
 
+
+Project work as part of the Programming and Scripting module in partial fulfillment of a H.Dip in Data Analytics in Computing. 
+Student number G00398250 (Katie O'Brien)
 
 
 
