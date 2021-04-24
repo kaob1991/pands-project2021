@@ -78,7 +78,7 @@ All of the above were pre-installed in python using anaconda, and the code was w
 
  ### Basic Analysis
 
-```shape()``` was ran to get the parameters of the data file, important for understanding the scope of the data frame. It's also important to ensure that the correct dataset is in use as there are many variants of the dataset around and using a different version will produce incorrect outputs.
+```shape()``` was ran to get the parameters of the data file, important for understanding the scope of the data frame. It's also important to ensure that the correct dataset is in use as there are many variants of the dataset available on the internet; and using a different version will produce incorrect outputs.
 
  ``` python
  print ("This is the shape of the datafile:\n(first number denotes the number of rows, the second the number of columns)", file = out)
@@ -124,7 +124,8 @@ This returned the following:
 Looking at the Standard Deviation we can see that it is relatively low for 3 of the 4 variable types ( petal width, sepal length, sepal width) with a number below 1. However the petal length has a higher standard deviation suggesting that there is more variability in the measurements of this particular variable than the others.
 
 
-3 different variable types were then established ( 1 for each species of the flower) and a numerical summary of each individual species was run, again using ```describe()```
+3 different variable types were then established (1 for each species of the flower) and a numerical summary of each individual species was run, again using 
+```describe()```:
 
 ```python
 iris_set = iris.loc [iris ["class"] == "Iris-setosa"]
@@ -150,7 +151,7 @@ This returns the output for each individual species types:
 It gives a nice idea of the average real-life sizes of the flowers. It can be seen that, on average, the Iris Setosa has a large sepal compared to the petal, whereas the Iris Virginica and Versicolor's petals and sepals are closer in size. 
 
 
-Finally, a correlation was run as were the levels of skewness, and kurtosis, on the datafile using ```corr()```, ```iris.kurt()```, and ```iris.skew()``` to demonstrate the relationship between the variables. This produces the relationship between them on a scale between 0 and 1, with 0 being no relationship detected, and 1 being a perfect correlation. 
+Finally, a correlation was run on the datafile using ```corr()```, to demonstrate the relationship between the variables. This produces the relationship between them on a scale between 0 and 1, with 0 being no relationship detected, and 1 being a perfect correlation. 
 
 ```python
 print ("Correlation table between the various data types:", file = out)
@@ -174,7 +175,7 @@ sns.heatmap(iris_df.corr(), cmap = "Blues", annot = True)
 
 ![](https://github.com/kaob1991/pands-project2021/blob/ad0507feffa779bbc51e5fa42189a926e07067ae/heatmap_correlation.png)
 
-A correlation was also ran on the individual species' variables to explore the levels of correlation within, and again, heatmaps were added for for ease of visibility. 
+A correlation was also run on the individual species' variables to explore the levels of correlation within, and again, heatmaps were added for for ease of visibility. 
 
 ```python
 
@@ -191,15 +192,15 @@ print (iris_vir.corr(), file = out)
 
 ![](https://github.com/kaob1991/pands-project2021/blob/6da0bdda0f840ea5d1822a0d7f661993d4b0421c/species%20correlation.png)
 
-Iris Setosa:
+Iris Setosa Heatmap:
 
 ![](https://github.com/kaob1991/pands-project2021/blob/ad0507feffa779bbc51e5fa42189a926e07067ae/heatmap_setosa.png)
 
-Iris Versicolor:
+Iris Versicolor Heatmap:
 
 ![](https://github.com/kaob1991/pands-project2021/blob/ad0507feffa779bbc51e5fa42189a926e07067ae/heatmap_versicolor.png)
 
-Iris Virginica:
+Iris Virginica Heatmap:
 
 ![](https://github.com/kaob1991/pands-project2021/blob/ad0507feffa779bbc51e5fa42189a926e07067ae/heatmap_virginica.png)
 
@@ -213,6 +214,7 @@ The results show the following:
 
 
 ### Plotting Analysis
+
 
 Following the summary analysis the variables were then plotted using a histogram. This will display the variables in an easy-to-read graphic that shows the frequency that individual variables appear in the data frame. 
 
@@ -239,6 +241,7 @@ This was the result of the histograms.
 
 
 Looking at the distribution of the curves:
+
 - In 'petal length' it can be seen that the curve is multimodal (i.e. it has 2 peaks) and the data is predominantly skewed to the left. 
 
 - The data of the variables in 'petal width' follows no clear distribution curve
@@ -279,6 +282,7 @@ The other 2 species are both normally distributed as well, but there are signifi
 
 
 While histogram's give a great overview of the data itself, they do not plot the individual data points, so for that we need to use a scatterplot to see the relationship between the variables. 
+
 
 ### Further Detailed Analysis 
 
@@ -377,6 +381,7 @@ def swarmbox_plt(n, variable):
 swarmbox_plt(1, "petalwidth")
 ```
 The images below demonstrate the data from petal length; and an overview plot. The overview plot is difficult to see and as a result I have included the other 3 plots in the repository for analysis. 
+
 ![](https://github.com/kaob1991/pands-project2021/blob/9628aad3deac12fa662b2e2e4bc670f1261f6a96/boxplot_petal_l.png)
 
 ![](https://github.com/kaob1991/pands-project2021/blob/9628aad3deac12fa662b2e2e4bc670f1261f6a96/box_swarm_plot.png)
@@ -386,7 +391,7 @@ Boxplots give a good indication of how the data values are spread out. It uses t
 Swarm plots (also called beeswarm plots, as they can sometimes resemble swarming bees),are useful to show all datapoints with some respresentation of underlying distribution. They are similar to strip-plots but the points are adjusted so that they don't overlap. 
 
 
-Finally the presentation of the data as a pair plot graph is both concise and visually striking. The use of seaborn allows the data to be presented in a easy to read manner and is equally straightforward in its display of the scatterplot and histogram data. It produces a matrix of relationships between each variable in the dataset for an instant examination of the data, even allows the data to be split by species type. The code used is equally straightforward and is demonstrated below: 
+Finally the presentation of the data as a pair plot graph is both concise and visually striking. The use of seaborn allows the data to be presented in a easy to read manner and is equally straightforward in its display of the scatterplot and histogram data. It produces a matrix of relationships between each variable in the dataset for an instant examination of the data and even allows the data to be split by species type. The code used is equally straightforward and is demonstrated below: 
 
 ```python 
 figurepairplot = sns.pairplot(data = iris, kind = "scatter", hue = "class") 
@@ -399,11 +404,10 @@ plt.savefig ("pair-plot")
 ### Conclusion 
 
 There are many reasons to use Python over other software and coding packages that are available. Having had previous personal experience with IBM's SPSS (Statistical Package for Social Sciences) in previous studies I found the use of python in this case to be highly customisable, to an extent far greater than I had previously experienced.
-Python provides a huge range of extremely powerful packages such as NumPy,Pandas, seaborn, and matplotlib that make it incredibly simple to code complex data analytics problems. 
-It's also easy to use and understand. Having never used Python prior to the beginning of this module I found the use of the packages such as matplotlib exceptionally straightforward. Its also much quicker at completing the analysis than the likes of SPSS or Excel. 
-Another benefit of using Python over something like excel or SPSS is reproducibility. This both saves time, and ensures consistency. As the programmer has control over the code being written, reproducing the same data is easier, be that with the same dataset, an updated one, or even different sets when looking for the same analysis to be run. The downside to using something like excel is that to receive the same data output the data analysist has to manually complete (and remember) the sequence of steps that they took when originally performing the analysis. 
+Python provides a huge range of extremely powerful packages such as NumPy,pandas, seaborn, and matplotlib that make it incredibly simple to code complex data analytics problems. It's also relatively easy to use and understand, particularly when compared to other lower level programming languages. It also processes programs relatively quickly, which is another benefit of using the likes of python over other languages or software packages.
+Another benefit of using Python over something like Microsoft Excel or SPSS is reproducibility. This both saves time, and ensures consistency. As the programmer has control over the code being written, reproducing the same data is easier, be that with the same dataset, an updated one, or even different sets when looking for the same analysis to be run. The downside to using something like Excel is that to receive the same data output the data analysist has to manually complete (and remember) the sequence of steps that they took when originally performing the analysis. 
 
-The above data analysis shows how easy it is to quickly and concisely display a dataset in a graphical display which allows for analysis of the data with minimal effort. There is plenty of analysis avaialble on the Iris dataset and research (including the references listed below) provided some interesting inspiration for the analysis above. 
+The above data analysis shows how easy it is to quickly and concisely display a dataset in a graphical display which allows for analysis of the data with minimal effort. It also allows the presentation of the data to others in an easily-understandable manner. There is plenty of analysis avaialble on the Iris dataset and research (including the references listed below) provided some interesting inspiration for the analysis of this dataset in this project. 
 
 
 ## REFERENCES:
