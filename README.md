@@ -524,3 +524,6 @@ The above data analysis shows how easy it is to quickly and concisely display a 
  
  37. https://www.kite.com/python/docs/seaborn.swarmplot
  	(retrieved 24/04/21 @ 14.21) 
+
+ 38. https://www.reddit.com/r/datascience/comments/8ggvx4/why_python_over_excel/
+ 	(retrieved 24/04/21 @ 19.28)
