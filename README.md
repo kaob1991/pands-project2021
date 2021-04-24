@@ -8,7 +8,7 @@ Student number G00398250 (Katie O'Brien)
 
 ##  Dataset Information and Context
 
-Fisher's Iris dataset was introduced by the statistician Ronald Fisher in a 1936 paper called "The use of multiple measurements in taxonomic problems" as an example of linear discriminant analysis. Linear discriminant analysis is the method used in statistics and other fields to find a linear combination of features that characterises or seperates two or more classes of objects or events. Fisher also was responsible for the development of the Analysis of Variance (ANOVA) test.   
+Fisher's Iris dataset was introduced by the statistician Ronald Fisher in a 1936 paper called "The use of multiple measurements in taxonomic problems" as an example of linear discriminant analysis. Linear discriminant analysis is the method used in statistics and other fields to find a linear combination of features that characterises or separates two or more classes of objects or events. Fisher also was responsible for the development of the Analysis of Variance (ANOVA) test.   
 The dataset consists of 150 instances, made up of  50 samples each of 3 species of iris. There were 4 features measured from each sample. These were - the length and width of the sepals and the length and width of the petals.
 While one class  (or species) is linearly separable from the other 2; the others are NOT.
 
@@ -54,9 +54,9 @@ This dataset is commonly used for machine learning, particularly in statistical 
 
 - ```pandas``` is a high-level, powerful module used for real-world data analysis and data manipulation. It provides fast, flexible and expressive data structures          designed to make working with data both easy and intuitive 
 
-- ```seaborn``` is a Python data visualisation library based on matplotlib that offers less-dated choices for plot style and color defaults than matplotlib, defines  simple high-level functions for common statistical plot types, and integrates with the functionality provided by Pandas DataFrames.
+- ```seaborn``` is a Python data visualisation library based on matplotlib that offers less-dated choices for plot style and colour defaults than matplotlib, defines  simple high-level functions for common statistical plot types, and integrates with the functionality provided by Pandas DataFrames.
 
-- ```matplotlib``` is a module for static, interactive & animated visualisations allowing high levels of customisation and the embedding of plots into applications; and   pyplot provides a MATLAB-like interface within this module. 
+- ```matplotlib``` is a module for static, interactive & animated visualisations allowing high levels of customisation and the embedding of plots into applications; and pyplot provides a MATLAB-like interface within this module. 
 
 All of the above were pre-installed in python using anaconda, and the code was written using VSCode. 
 
@@ -220,7 +220,7 @@ The results show the following:
 
 Following the summary analysis the variables were then plotted using a histogram. This will display the variables in an easy-to-read graphic that shows the frequency that individual variables appear in the data frame. 
 
-The following sample code was used, making changes to color and labels as appropriate to adequately differentiate the variables. 
+The following sample code was used, making changes to colour and labels as appropriate to adequately differentiate the variables. 
 
 ```python
 
@@ -372,7 +372,7 @@ lm_plot("sepallength", "petallength", "lm_1.png")
 We can see with this graph it gives a linear regression model allowing the relationship with the data to be clearly shown: 
 ![](https://github.com/kaob1991/pands-project2021/blob/816989d460976bee9092167c9b946230b4a2ed54/lm_1.png)
 
-Another way is to present the data as a boxplot overaid with a swarm plot and this allows the data to be displayed in a clear and concise matter. The visualisation draws attention to the data in the following manner. The sample code used is below: 
+Another way is to present the data as a boxplot overlaid with a swarm plot and this allows the data to be displayed in a clear and concise matter. The visualisation draws attention to the data in the following manner. The sample code used is below: 
 
 ```python 
 
@@ -390,7 +390,7 @@ The images below demonstrate the data from petal length; and an overview plot. T
 
 Boxplots give a good indication of how the data values are spread out. It uses the box to demonstrate the IQR (Interquartile range) between the 25th and 75th percentile, with the vertical lines ("whiskers") representing the data to the "maximum" and "minimum" horizontal lines on both sides. 
 
-Swarm plots (also called beeswarm plots, as they can sometimes resemble swarming bees),are useful to show all datapoints with some respresentation of underlying distribution. They are similar to strip-plots but the points are adjusted so that they don't overlap. 
+Swarm plots (also called bee swarm plots, as they can sometimes resemble swarming bees),are useful to show all data points with some representation of underlying distribution. They are similar to strip-plots but the points are adjusted so that they don't overlap. 
 
 
 Finally the presentation of the data as a pair plot graph is both concise and visually striking. The use of seaborn allows the data to be presented in a easy to read manner and is equally straightforward in its display of the scatterplot and histogram data. It produces a matrix of relationships between each variable in the dataset for an instant examination of the data and even allows the data to be split by species type. The code used is equally straightforward and is demonstrated below: 
@@ -406,10 +406,10 @@ plt.savefig ("pair-plot")
 ### Conclusion 
 
 There are many reasons to use Python over other software and coding packages that are available. Having had previous personal experience with IBM's SPSS (Statistical Package for Social Sciences) in previous studies I found the use of python in this case to be highly customisable, to an extent far greater than I had previously experienced.
-Python provides a huge range of extremely powerful packages such as NumPy,pandas, seaborn, and matplotlib that make it incredibly simple to code complex data analytics problems. It's also relatively easy to use and understand, particularly when compared to other lower level programming languages. It also processes programs relatively quickly, which is another benefit of using the likes of python over other languages or software packages.
+Python provides a huge range of extremely powerful packages such as NumPy, pandas, seaborn, and matplotlib that make it incredibly simple to code complex data analytics problems. It's also relatively easy to use and understand, particularly when compared to other lower level programming languages. It also processes programs relatively quickly, which is another benefit of using the likes of python over other languages or software packages.
 Another benefit of using Python over something like Microsoft Excel or SPSS is reproducibility. This both saves time, and ensures consistency. As the programmer has control over the code being written, reproducing the same data is easier, be that with the same dataset, an updated one, or even different sets when looking for the same analysis to be run. The downside to using something like Excel is that to receive the same data output the data analysist has to manually complete (and remember) the sequence of steps that they took when originally performing the analysis. 
 
-The above data analysis shows how easy it is to quickly and concisely display a dataset in a graphical display which allows for analysis of the data with minimal effort. It also allows the presentation of the data to others in an easily-understandable manner. There is plenty of analysis avaialble on the Iris dataset and research (including the references listed below) provided some interesting inspiration for the analysis of this dataset in this project. 
+The above data analysis shows how easy it is to quickly and concisely display a dataset in a graphical display which allows for analysis of the data with minimal effort. It also allows the presentation of the data to others in an easily-understandable manner. There is plenty of analysis available on the Iris dataset and research (including the references listed below) provided some interesting inspiration for the analysis of this dataset in this project. 
 
 
 ## REFERENCES:
@@ -487,7 +487,7 @@ The above data analysis shows how easy it is to quickly and concisely display a 
         (retrieved 10/04/21 @ 18.16)
      
  25. https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html
-        (retieved 10/04/21 @ 20.39)
+        (retrieved 10/04/21 @ 20.39)
      
  26. https://medium.com/@morganjonesartist/color-guide-to-seaborn-palettes-da849406d44f
         (retrieved 10/04/21 @ 20.40)
@@ -517,13 +517,17 @@ The above data analysis shows how easy it is to quickly and concisely display a 
 	(retrieved 19/04/21 @ 18.00)
 
  35. https://www.geeksforgeeks.org/python-seaborn-swarmplot-method/
+
  	(retrieved 19/04/21 @ 18.25)
-	
+
  36. https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51
+
  	(retrieved 24/04/21 @ 14.20)
- 
+
  37. https://www.kite.com/python/docs/seaborn.swarmplot
+
  	(retrieved 24/04/21 @ 14.21) 
 
  38. https://www.reddit.com/r/datascience/comments/8ggvx4/why_python_over_excel/
+
  	(retrieved 24/04/21 @ 19.28)
