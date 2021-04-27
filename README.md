@@ -79,6 +79,8 @@ All of the above were pre-installed in python using anaconda 3, and the code was
  At this point a sanity check was also performed to ensure that there was no issues with the import of the libraries and to ensure that the read in of the dataset was problem-free.
 
  ### Basic Analysis
+ 
+ #### Shape()
 
 ```shape()``` was ran to get the parameters of the data file, important for understanding the scope of the data frame. It's also important to ensure that the correct dataset is in use as there are many variants of the dataset available on the internet; and using a different version will produce incorrect outputs.
 
@@ -94,7 +96,7 @@ This returned the following output which demonstrates that the datafile is 150 r
 
 ![](https://github.com/kaob1991/pands-project2021/blob/13a5198bb8aaf833a1aa79d435061477ab345a04/shape.png)
 
-
+#### Head()
 
 ```head()``` was also used to demonstrate the layout of the file, and the various names of the variables 
 
@@ -110,6 +112,9 @@ Which returns the following details:
 ![](https://github.com/kaob1991/pands-project2021/blob/13a5198bb8aaf833a1aa79d435061477ab345a04/head.png)
 
 We can see from the output it shows that there are 5 variables, and 4 of them are of type float (sepal length, sepal width, petal length, petal width), and one string which is the species type (class). 
+
+
+#### Describe()
 
 
 Running the data through ```describe()``` returned a basic numerical summary of the data containing the mean, max, standard deviation etc. of the data file 
@@ -151,6 +156,9 @@ This returns the output for each individual species types:
 ![](https://github.com/kaob1991/pands-project2021/blob/13a5198bb8aaf833a1aa79d435061477ab345a04/describe%20iris.png)
 
 It gives a nice idea of the average real-life sizes of the flowers. It can be seen that, on average, the Iris Setosa has a large sepal compared to the petal, whereas the Iris Virginica and Versicolor's petals and sepals are closer in size. 
+
+
+#### Correlation & Heatmaps
 
 
 Finally, a correlation was run on the datafile using ```corr()```, to demonstrate the relationship between the variables. This produces the relationship between them on a scale between 0 and 1, with 0 being no relationship detected, and 1 being a perfect correlation. 
@@ -216,6 +224,8 @@ The results show the following:
 
 
 ### Plotting Analysis
+
+#### Histograms
 
 
 Following the summary analysis the variables were then plotted using a histogram. This will display the variables in an easy-to-read graphic that shows the frequency that individual variables appear in the data frame. 
@@ -288,6 +298,8 @@ While histogram's give a great overview of the data itself, they do not plot the
 
 ### Further Detailed Analysis 
 
+#### Scatterplots
+
 Scatterplots are a quick and simple way to look at the relationship between the variables, and easier for the inexperienced user to interpret the data. 
 
 We will run a scatterplot between each variable and set the code to output a .png file for convenience. Following research on whether to use ```plt.plot``` or ```plt.scatter``` it was decided that as we are going to be running all 3 varieties of Iris in the dataset we will be using ```plt.scatter```, as it offers the added colour customisation that we need to clearly demonstrate the data (see reference no. 31). A sample of code used is below: 
@@ -359,7 +371,9 @@ When we look at the scatterplots from our data there are a number of relationshi
   6) Petal width and Petal length:
       There is a strong positive correlation between the data in this scatterplot. The data points for Iris Setosa and Versicolor are tightly packed around the diagonal,       while Virginica is slightly less densely packed, suggesting a greater variation in the data gathered for that particular species. 
       
-      
+
+#### Linear Model Plots
+
 While Scatterplots are a great way to see the data clearly presented there a number of other ways to present the data. For example ```sns.lmplot``` offers a linear regression model which plots the data as the scatterplots above, but overlays a overplot line on the data to make the linear regression clearer. An example of this data is shown below and is a helpful way of visualising the data further. The other 5 plots relevant to the data are available in the repository for viewing if required. The sample code is below: 
 
 ``` python 
@@ -371,6 +385,9 @@ lm_plot("sepallength", "petallength", "lm_1.png")
 
 We can see with this graph it gives a linear regression model allowing the relationship with the data to be clearly shown: 
 ![](https://github.com/kaob1991/pands-project2021/blob/816989d460976bee9092167c9b946230b4a2ed54/lm_1.png)
+
+
+#### Boxplot/Swarmplot
 
 Another way is to present the data as a boxplot overlaid with a swarm plot and this allows the data to be displayed in a clear and concise matter. The visualisation draws attention to the data in the following manner. The sample code used is below: 
 
@@ -391,6 +408,8 @@ The images below demonstrate the data from petal length; and an overview plot. T
 Boxplots give a good indication of how the data values are spread out. It uses the box to demonstrate the IQR (Interquartile range) between the 25th and 75th percentile, with the vertical lines ("whiskers") representing the data to the "maximum" and "minimum" horizontal lines on both sides. 
 
 Swarm plots (also called bee swarm plots, as they can sometimes resemble swarming bees),are useful to show all data points with some representation of underlying distribution. They are similar to strip-plots but the points are adjusted so that they don't overlap. 
+
+#### Pair Plot
 
 
 Finally the presentation of the data as a pair plot graph is both concise and visually striking. The use of seaborn allows the data to be presented in a easy to read manner and is equally straightforward in its display of the scatterplot and histogram data. It produces a matrix of relationships between each variable in the dataset for an instant examination of the data and even allows the data to be split by species type. The code used is equally straightforward and is demonstrated below: 
