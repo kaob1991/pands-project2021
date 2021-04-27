@@ -239,7 +239,7 @@ hist_var (1, "sepallength", "b", "Sepal Length")
 
 This was the result of the histograms. 
 
-![](https://github.com/kaob1991/pands-project2021/blob/717cf3044507dbdd461905b2c5ed8950e684072c/variable_histograms.png)
+![](https://github.com/kaob1991/pands-project2021/blob/5589bee8938fe2b37d7be2469a78dba091667937/variable_histograms.png)
 
 
 Looking at the distribution of the curves:
@@ -527,3 +527,7 @@ The above data analysis shows how easy it is to quickly and concisely display a 
 
  38. https://www.reddit.com/r/datascience/comments/8ggvx4/why_python_over_excel/
 	(retrieved 24/04/21 @ 19.28)
+	
+ 39. https://stackoverflow.com/questions/50294951/python-boxplot-on-single-variables
+
+      (retrieved 27/04/21 @ 20.10)
