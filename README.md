@@ -4,7 +4,7 @@
 Project work as part of the Programming and Scripting module in partial fulfillment of a H.Dip in Data Analytics in Computing. 
 Student number G00398250 (Katie O'Brien)
 
-
+See "issues" wihtin this repository for a to-do list which provides evidence of planning and workflow for this project. 
 
 ##  Dataset Information and Context
 
@@ -58,7 +58,7 @@ This dataset is commonly used for machine learning, particularly in statistical 
 
 - ```matplotlib``` is a module for static, interactive & animated visualisations allowing high levels of customisation and the embedding of plots into applications; and pyplot provides a MATLAB-like interface within this module. 
 
-All of the above were pre-installed in python using anaconda, and the code was written using VSCode. 
+All of the above were pre-installed in python using anaconda 3, and the code was written using VSCode. 
 
 ### Dataset 
 
