@@ -133,23 +133,15 @@ plt.savefig("heatmap_virginica.png")
 # tight_layout() resizes the fonts of the plots to make them all fit better in the graphic 
 # savefig() saves the plots to a .png file name set below 
 
-def hist_var (n, variable, col, x_label,):
-    plt.subplot(2,2,n)
-    plt.hist(iris[variable], color = col)
-    plt.ylabel ("Frequency")
-    plt.xlabel (x_label)
-    plt.suptitle ("Variable Distribution")
-    plt.tight_layout()
-    plt.savefig("variable_histograms.png")
+f, axes = plt.subplots (2,2)
+sns.histplot(iris, x = "sepallength", label = "small", color = "green", kde = True, ax = axes [0][0])
+sns.histplot(iris, x = "sepalwidth", label = "small", color = "black", kde = True, ax = axes [1][1])
+sns.histplot(iris, x = "petallength", label = "small", color = "blue", kde = True, ax = axes [0][1])
+sns.histplot(iris, x = "petalwidth", label = "small",color = "red", kde = True, ax = axes [1][0])
+plt.savefig("variable_histograms.png")
 
 
-# The below 4 lines are generating a histgram plot using the function above
-# plot number (x of 4), variable_name, colour, and title for x axis  
-
-hist_var (1, "sepallength", "b", "Sepal Length")
-hist_var (2, "petallength", "r", "Petal Length")
-hist_var (3, "sepalwidth", "g", "Sepal Width")
-hist_var (4, "petalwidth", "m", "Petal Width")
+ 
 
 
 # fuction created for a histogram colour coded by species in order to see spread more clearly
@@ -160,7 +152,7 @@ hist_var (4, "petalwidth", "m", "Petal Width")
 # tight_layout() resizes the fonts of the plots to make them all fit better in the graphic 
 # savefig() saves output as a .png file
 
-'''
+
 def hist_func (n ,variable, x_label):
     plt.suptitle ("Variable Distribution When Split by Species")
     plt.subplot(2,2,n)
@@ -171,17 +163,17 @@ def hist_func (n ,variable, x_label):
     plt.ylabel ("Frequency")
     plt.tight_layout()
     plt.savefig ("variable_species_histogram.png")
-'''
+
 
 # The 4 lines below are creating a histogram for each 
 # The variables are as follows: plot number (x of 4), variable, x-axis label
 
-'''
+
 hist_func (1, "petalwidth", "Petal Width (cm's)")
 hist_func (2, "petallength", "Petal length (cm's)")
 hist_func (3, "sepalwidth", "Sepal Width (cm's)")
 hist_func (4, "sepallength", "Sepal Length (cm's)")
-'''
+
 
 # Defining a function for scatterplot analysis with variables
 # x/ylabel takes in axis names
@@ -217,23 +209,23 @@ scatter_func ("Sepal Length", "Petal Width", "sepallength", "petalwidth", "Sleng
 # savefig() saves the plot as a .png file
 
 
-
+'''
 def lm_plot( x_value, y_value,output_file):
     sns.lmplot (x = x_value, y = y_value, data = iris,height = 8,  hue = "class", scatter_kws = {"s": 50})
     plt.savefig (output_file)
-
+'''
 
 # Creating the lmplots using the following variables
 # (x and y variables, output name)
 
-
+'''
 lm_plot("sepallength", "petallength", "lm_1.png")
 lm_plot("sepallength", "sepalwidth", "lm_2.png")
 lm_plot("petallength", "petalwidth", "lm_3.png")
 lm_plot("sepalwidth", "petallength", "lm_4.png")
 lm_plot("sepalwidth", "petalwidth", "lm_5.png")
-lm_ plot("sepallength", "petalwidth", "lm_6.png")
-
+lm_plot("sepallength", "petalwidth", "lm_6.png")
+'''
 
 # Function to create a boxplot/swarmplot 
 # subplot() is used for multiple plots on the same graphic and takes arguments (row,column,plot no.)
@@ -242,56 +234,44 @@ lm_ plot("sepallength", "petalwidth", "lm_6.png")
 # data = dataset, size = size of marker and color changes the colour of the marker point 
 
 
-def swarmbox_plt(n, variable):
-    plt. subplot (2,2,n)
+def swarm_plt(variable, output):
     sns.boxplot(x = "class", y = variable, data = iris)
-    sns.swarmplot( x = "class", y = variable, data = iris, size = 1, color = "m")
+    sns.swarmplot( x = "class", y = variable, data = iris, size = 3, color = "m")
+    plt.savefig (output)
+    plt.close()
+swarm_plt("petalwidth", "boxplot_petal_w.png")
+swarm_plt("petallength", "boxplot_petal_l.png")
+swarm_plt("sepallength", "boxplot_sepal_l.png")
+swarm_plt("sepalwidth", "boxplot_sepal_w.png")
 
 
-# the following 4 lines create the equivalent plots using the following variables
-# (plot number, variable type)
 
 
-swarmbox_plt(1, "petalwidth")
-swarmbox_plt(2, "petallength")
-swarmbox_plt(3, "sepallength")
-swarmbox_plt(4, "sepalwidth")
-
-
-# the next 2 lines set the display plot
-# tight_layout() resizes the fonts of the plots to make them all fix better in the graphic 
-# savefig() saves output as a .png file
-
+f, axes = plt.subplots (2,2)
+sns.boxplot(x = "class", y = "petalwidth", data = iris, ax = axes [0][0])
+sns.swarmplot( x = "class", y = "petalwidth", data = iris, size = 1, color = "m", ax = axes [0][0])
+sns.boxplot(x = "class", y = "petallength", data = iris, ax = axes [1][0])
+sns.swarmplot( x = "class", y = "petallength", data = iris, size = 1, color = "m", ax = axes [1][0])
+sns.boxplot(x = "class", y = "sepallength", data = iris, ax = axes [0][1])
+sns.swarmplot( x = "class", y = "sepallength", data = iris, size = 1, color = "m", ax = axes [0][1])
+sns.boxplot(x = "class", y = "sepalwidth", data = iris, ax = axes [1][1])
+sns.swarmplot( x = "class", y = "sepalwidth", data = iris, size = 1, color = "m", ax = axes [1][1])
 
 plt.tight_layout()
 plt.savefig("box_swarm_plot.png")
 
 
-#swarmplot/boxplot for individual variables 
-# boxplot() creates the boxplot and takes in species type as x, variable as y, and data = dataset
-# swarmplot() creates the swarmplot and like boxplot, takes in species type and variable as x + y,
-# data = dataset, size = size of marker and color changes the colour of the marker point 
-# savefig() saves output as a .png file
 
-'''
-def swarm_plt(variable, output):
-    #plt.figure()
-    sns.boxplot(x = "class", y = variable, data = iris)
-    sns.swarmplot( x = "class", y = variable, data = iris, size = 3, color = "m")
-    plt.savefig (output)
-'''
 
-# creating the swarm/box plots using the function above & the following variables
-# (variable, output file name)
 
-'''
-swarm_plt("petalwidth", "boxplot_petal_w.png")
-swarm_plt("petallength", "boxplot_petal_l.png")
-swarm_plt("sepallength", "boxplot_sepal_l.png")
-swarm_plt("sepalwidth", "boxplot_sepal_w.png")
-'''
 
-# pairplot takes in the following variables to output the figure
+
+
+
+
+
+
+#pairplot takes in the following variables to output the figure
 # pairplot() takes in: data = dataset, "kind" sets the output type, "hue" sorts by species
 # savefig() saves the output as a .png file   
 
