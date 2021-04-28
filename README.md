@@ -20,7 +20,7 @@ Image showing different species included in the data set and items measured in t
 
 ​	(Source:https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5)
 
-This dataset is commonly used for machine learning, particularly in statistical classification techniques across multiple disciplines. It is widely considered to be a good option for illustrating problems in the areas of statistical graphics, multivariate statistics and machine learning. The UCI machine learning repository, often considered the source of the "true" dataset, contains well over 200 papers and books referencing the use of the dataset.  It comprises of real, good quality data, in a small but meaningful dataset. This offers a simple but challenging task of discriminating between various types. In fact it is so popular that the dataset is readily available through the scikit-learn package, used in machine learning. 
+This dataset is commonly used for machine learning, particularly in statistical classification techniques across multiple disciplines. It is widely considered to be a good option for illustrating problems in the areas of statistical graphics, multivariate statistics. The UCI repository, often considered the source of the "true" dataset, contains well over 200 papers and books referencing the use of the dataset.  It comprises of real, good quality data, in a small but meaningful dataset. This offers a simple but challenging task of discriminating between various types. In fact it is so popular that the dataset is readily available through the scikit-learn package, used in machine learning and statistical modelling. 
 
 
 
@@ -155,7 +155,7 @@ This returns the output for each individual species types:
 
 ![](https://github.com/kaob1991/pands-project2021/blob/13a5198bb8aaf833a1aa79d435061477ab345a04/describe%20iris.png)
 
-It gives a nice idea of the average real-life sizes of the flowers. It can be seen that, on average, the Iris Setosa has a large sepal compared to the petal, whereas the Iris Virginica and Versicolor's petals and sepals are closer in size. 
+It gives an accurate idea of the average real-life sizes of the flowers. It can be seen that, on average, the Iris Setosa has a large sepal compared to the petal, whereas the Iris Virginica and Versicolor's petals and sepals are closer in size. 
 
 
 #### Correlation & Heatmaps
@@ -256,7 +256,7 @@ Looking at the distribution of the curves:
 - The curve for the 'sepal width' follows a normal distribution. 
 
 Following some research into this distribution it was discovered that the multimodal distribution was possibly a indication that the data needed to be further split into the relative species in order to fully determine the relationship (see reference no 28).
-Therefore a histogram of each variable was then ran, split by species to check the distribution at this point (see reference no. 27), using the sample code below: 
+Therefore a histogram of each variable was then run, split by species to check the distribution at this point (see reference no. 27), using the sample code below: 
 
 ```python
 
@@ -282,7 +282,7 @@ This produced the following histogram, showing the variables split by species:
 
 
 
-This gives a much clearer idea of what is going on with the individual species and looking at the image we can see that there is a normal distribution pattern amongst a number of species when looking at the variables. Looking at the relationship between the 3 variables it is very clear that, as mentioned at the beginning the Iris Setosa is linearly separable from the others when looking at the Petals. The Sepals are also normally distributed in both width and length. 
+This gives a much clearer idea of what is going on with the individual species; and looking at the image we can see that there is a normal distribution pattern amongst a number of species when looking at the variables. Looking at the relationship between the 3 variables it is very clear that, as mentioned at the beginning, the Iris Setosa is linearly separable from the others when looking at the Petals. The Sepals are also normally distributed in both width and length. 
 The other 2 species are both normally distributed as well, but there are significant amounts of overlap, particularly in the Sepal. The petal's appear to be less so with the Virginica species clearly averaging a slightly larger size. 
 
 
@@ -303,7 +303,7 @@ def scatter_func (x_name,y_name,x_variable,y_variable,output_name):
    plt.figure()
    plt.xlabel (x_name)
    plt.ylabel (y_name)
-   sns.scatterplot (x_variable, y_variable , data = iris, hue = "class") #This works
+   sns.scatterplot (x_variable, y_variable , data = iris, hue = "class")
    plt.savefig(output_name)
 scatter_func ("Sepal Length", "Petal Length", "sepallength", "petallength", "SlengthPlength.png")
 
@@ -347,6 +347,7 @@ Petal width and Petal length:
 Looking at the above it is easy to see whether a relationship exists between the variables depending on how close the individual dots come to form an imaginary diagonal line that runs on the graph. If the line starts in the bottom left to top right it can be said to have a positive linear correlation; and if it starts in the bottom right to top left then it can be said to have a negative  linear correlation. The more spread out the dots from this line, the weaker the correlation. 
 
 When we look at the scatterplots from our data there are a number of relationships shown. A summary of the results is below :
+
   1) Sepal Width and Sepal Length:
       There appears to be no clear relationship when looking at the variables as an overall. Iris Setosa and Versicolor have a weak positive relationship between the 2         variables
 
@@ -393,9 +394,11 @@ sns,swarmplot(x = "class", y = "petalwidth", data = iris, size = 1, color = "m",
 
 plt.tight_layout()
 plt.savefig("box_swarm_box.png)
+
 ```
 
-The following modifications were made to the code for the individual plots to prevent the variables from carrying over into the next
+The following modifications were made to the code for the individual plots to prevent the variables from carrying over into the next:
+
 ```python
 
 def swarmbox_plt(variable, output):
@@ -432,7 +435,9 @@ plt.savefig ("pair-plot")
 ### Conclusion 
 
 There are many reasons to use Python over other software and coding packages that are available. Having had previous personal experience with IBM's SPSS (Statistical Package for Social Sciences) in previous studies I found the use of python in this case to be highly customisable, to an extent far greater than I had previously experienced.
-Python provides a huge range of extremely powerful packages such as NumPy, pandas, seaborn, and matplotlib that make it incredibly simple to code complex data analytics problems. It's also relatively easy to use and understand, particularly when compared to other lower level programming languages. It also processes programs relatively quickly, which is another benefit of using the likes of python over other languages or software packages.
+
+Python provides a huge range of extremely powerful packages such as NumPy, pandas, seaborn, and matplotlib that make it incredibly simple to code complex data analytics problems. It's also relatively easy to use and understand, particularly when compared to other lower level programming languages. Programs can be processed relatively quickly, which is another benefit of using the likes of python over other languages or software packages.
+
 Another benefit of using Python over something like Microsoft Excel or SPSS is reproducibility. This both saves time, and ensures consistency. As the programmer has control over the code being written, reproducing the same data is easier, be that with the same dataset, an updated one, or even different sets when looking for the same analysis to be run. The downside to using something like Excel is that to receive the same data output the data analysist has to manually complete (and remember) the sequence of steps that they took when originally performing the analysis. 
 
 The above data analysis shows how easy it is to quickly and concisely display a dataset in a graphical display which allows for analysis of the data with minimal effort. It also allows the presentation of the data to others in an easily-understandable manner. There is plenty of analysis available on the Iris dataset and research (including the references listed below) provided some interesting inspiration for the analysis of this dataset in this project. 
