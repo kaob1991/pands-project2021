@@ -4,7 +4,7 @@
 Project work as part of the Programming and Scripting module in partial fulfillment of a H.Dip in Data Analytics in Computing. 
 Student number G00398250 (Katie O'Brien)
 
-See "issues" wihtin this repository for a to-do list which provides evidence of planning and workflow for this project. 
+See "issues" within this repository for a to-do list which provides evidence of planning and workflow for this project. 
 
 ##  Dataset Information and Context
 
