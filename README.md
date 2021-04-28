@@ -66,7 +66,7 @@ All of the above were pre-installed in python using anaconda 3, and the code was
 
   ``` python
   
-  iris = pd.read ("iris_csv.csv")
+  iris = pd.read_csv ("iris_csv.csv")
   
   ```
 
@@ -179,8 +179,8 @@ Looking at the data, it shows a high level of correlation between petal length a
 Following some external research it was decided to also run a heatmap to better display the levels of correlation in a more visually accessible matter (see reference number 24 below). 
 
 ``` python
-fig = plt.figure(figsize = (15,9))
-sns.heatmap(iris_df.corr(), cmap = "Blues", annot = True)
+fig = plt.figure(figsize = (8,3))
+sns.heatmap(iris.corr(), cmap = "Blues", annot = True)
 ```
 
 ![](https://github.com/kaob1991/pands-project2021/blob/ad0507feffa779bbc51e5fa42189a926e07067ae/heatmap_correlation.png)
@@ -233,17 +233,10 @@ Following the summary analysis the variables were then plotted using a histogram
 The following sample code was used, making changes to colour and labels as appropriate to adequately differentiate the variables. 
 
 ```python
+f, axes = plt.subplots (2,2)
+sns.histplot(iris, x = "sepallength", label = "small", color = "green", kde = True, ax = axes [0][0]	
+plt.savefig("variable_histograms.png")
 
-def hist_var (n, variable, col, x_label,):
-    plt.subplot(2,2,n)
-    plt.hist(iris[variable], color = col)
-    plt.ylabel ("Frequency")
-    plt.xlabel (x_label)
-    plt.suptitle ("Variable Distribution")
-    plt.tight_layout()
-#plt.show ()
-    plt.savefig("variable_histograms.png")
-hist_var (1, "sepallength", "b", "Sepal Length")
 
 ```
 
@@ -307,6 +300,7 @@ We will run a scatterplot between each variable and set the code to output a .pn
 ``` python
 
 def scatter_func (x_name,y_name,x_variable,y_variable,output_name):
+   plt.figure()
    plt.xlabel (x_name)
    plt.ylabel (y_name)
    sns.scatterplot (x_variable, y_variable , data = iris, hue = "class") #This works
@@ -389,16 +383,29 @@ We can see with this graph it gives a linear regression model allowing the relat
 
 #### Boxplot/Swarmplot
 
-Another way is to present the data as a boxplot overlaid with a swarm plot and this allows the data to be displayed in a clear and concise matter. The visualisation draws attention to the data in the following manner. The sample code used is below: 
+Another way is to present the data as a boxplot overlaid with a swarm plot and this allows the data to be displayed in a clear and concise matter. The visualisation draws attention to the data in the following manner. The sample code used is below for each variable, modifying the variable and plot position: 
 
 ```python 
+f, axes = plt.subplots (2,2)
+sns.boxplot(x = "class", y = "petalwidth", data = iris, ax = axes [0][0])
+sns,swarmplot(x = "class", y = "petalwidth", data = iris, size = 1, color = "m", ax = axes [0][0])
 
-def swarmbox_plt(n, variable):
-    plt. subplot (2,2,n)
-    sns.boxplot(x = "class", y = variable, data = iris)
-    sns.swarmplot( x = "class", y = variable, data = iris, size = 1, color = "m")
-swarmbox_plt(1, "petalwidth")
+
+plt.tight_layout()
+plt.savefig("box_swarm_box.png)
 ```
+
+The following modifications were made to the code for the individual plots to prevent the variables from carrying over into the next
+```python
+
+def swarmbox_plt(variable, output):
+    sns.boxplot(x = "class", y = variable, data = iris)
+    sns.swarmplot( x = "class", y = variable, data = iris, size = 3, color = "m")
+    plt.savefig(output)
+    plt.close()
+swarmbox_plt("petalwidth", "boxplot_petal_w")
+```
+
 The images below demonstrate the data from petal length; and an overview plot. The overview plot is difficult to see and as a result I have included the other 3 plots in the repository for analysis. 
 
 ![](https://github.com/kaob1991/pands-project2021/blob/9628aad3deac12fa662b2e2e4bc670f1261f6a96/boxplot_petal_l.png)
