@@ -8,7 +8,7 @@ See "issues" within this repository for a to-do list which provides evidence of 
 
 ##  Dataset Information and Context
 
-Fisher's Iris dataset was introduced by the statistician Ronald Fisher in a 1936 paper called "The use of multiple measurements in taxonomic problems" as an example of linear discriminant analysis. Linear discriminant analysis is the method used in statistics and other fields to find a linear combination of features that characterises or separates two or more classes of objects or events. Fisher also was responsible for the development of the Analysis of Variance (ANOVA) test.   
+Fisher's Iris dataset was introduced by the statistician Ronald Fisher in a 1936 paper called "The use of multiple measurements in taxonomic problems" as an example of linear discriminant analysis. Linear discriminant analysis is the method used in statistics and other fields to find a linear combination of features that characterises or separates two or more classes of objects or events. Fisher was also responsible for the development of the Analysis of Variance (ANOVA) test.   
 The dataset consists of 150 instances, made up of  50 samples each of 3 species of iris. There were 4 features measured from each sample. These were - the length and width of the sepals and the length and width of the petals.
 While one class  (or species) is linearly separable from the other 2; the others are NOT.
 
