@@ -1,35 +1,43 @@
 # Program to analyse and produce plots from a dataset imported into the program 
 
 # This dataset is fisher's dataset and we will be obtaining a summary of each variable 
-# saving it to a text output and then saving a histogram of each variable to a png file 
+# saving it to a text output and then saving multiple plots of each variable to a png file 
 
-# Author: Katie O'Brien 
+# Further information is within the README file.
+
+# Author: Katie O'Brien (G00398250)
 
 
-# Importing required libraries for the dataset analysis
+
+# importing required libraries for the dataset analysis
+
 import pandas as pd 
 import matplotlib.pyplot as plt 
 import numpy as np 
 import seaborn as sns
 
+
 # reading in the csv iris datafile
+
 iris = pd.read_csv ("iris_csv.csv")
 
-# Outputting the data to a .txt file, the "w" ensures the file will be
+
+# outputting the data to a .txt file, the "w" ensures the file will be
 # overwritten each time the program is ran 
+
 out = open("summary_file_text_output.txt", "w")
 
 
-
-# Sanity check to ensure all libraries and file for reading in is correctly loading
-
+# sanity check to ensure all libraries and file for reading in is correctly loading
 # print ("all okay") 
-# Commented out post check as it is not required for the program
+# commented out post check as it is not required for the program
 
 
-# Using shape() to get the size and shape of the datafile, confirming the number of
+
+# using shape() to get the size and shape of the datafile, confirming the number of
 # rows in the dataset is 150 as expected;
 # and printing the header for ease of differentiation between various outputs
+# file = out outputs the file to the .txt doc
 
 print ("This is the shape of the datafile:\n(first number denotes the number of rows, the second the number of columns)", file = out)
 print (iris.shape, file = out)
@@ -37,7 +45,8 @@ print ("",file = out) # This is for empty rows for formatting
 print ("", file = out)
 
 
-# And demonstrating the layout of the datafile using head() 
+# and demonstrating the layout of the datafile using head() 
+# with 5 denoting the number of rows of the dataset to display 
 
 print("General layout of Fisher's Iris datafile:", file = out)
 print(iris.head(5), file = out)
@@ -45,16 +54,16 @@ print ("", file = out)
 print ("", file = out)
 
 
-#This provides a numerical summary of the data including mean max std etc using describe()
+# this provides a numerical summary of the data including mean max std etc using describe()
 # and outputs it to the datafile above 
-
 
 print("Numerical summary of the datatypes:", file = out)
 print(iris.describe(), file = out)
 print ("", file = out)
 print ("", file = out)
 
-# After running the initial analysis the data was then divided
+
+# after running the initial analysis the data was then divided
 # into the corresponding "class", ie species of flower using loc()
 
 iris_set = iris.loc [iris ["class"] == "Iris-setosa"]
@@ -63,7 +72,7 @@ iris_vir = iris.loc [iris ["class"] == "Iris-virginica" ]
 
 
 # running a summary of the data sorted by class using describe() 
-
+# and outputting to file
 
 print ("Numerical summary of the Iris Setosa", file = out)
 print (iris_set.describe(), file = out)
@@ -77,8 +86,7 @@ print ("", file = out)
 print ("", file = out)
 
 
-# Demonstrating the correlation between the various variable types using corr()
-
+# demonstrating the correlation between the various variable types using corr() and outputting to file
 
 print ("Correlation table between the various data types:", file = out)
 print (iris.corr(), file = out) 
@@ -86,17 +94,15 @@ print ("", file = out)
 print ("", file = out)
 
 
-# Demonstrating a heatmap for the correlations above using heatmap() 
+# demonstrating a heatmap for the correlations above using heatmap() 
 # cmap determines the colours used and annot writes the data value in each cell
-
 
 fig = plt.figure(figsize = (8,3))
 sns.heatmap(iris.corr(),cmap = "Blues", annot = True)
 plt.savefig ("heatmap_correlation.png")
 
 
-# Demonstrating the correlation within each individual species and creating heatmaps for each
-
+# demonstrating the correlation within each individual species and creating heatmaps for each
 
 print ("Correlation table within the Iris Setosa species", file = out)
 print (iris_set.corr(), file = out)
@@ -125,12 +131,10 @@ sns.heatmap(iris_vir.corr(),cmap = "Purples", annot = True)
 plt.savefig("heatmap_virginica.png")
 
 
-#Creating a histogram function that will save to a png file
-# subplot() is used for multiple plots on the same graphic and takes arguments (row,column,plot no.)
-# hist() takes in a variable, and the colour of the histogram 
-# x/ylabel() takes in the axis names
-# suptitle() takes in the overall name of all 4 plots
-# tight_layout() resizes the fonts of the plots to make them all fit better in the graphic 
+# creating a histogram function that will save to a png file
+# using the axes to set subplots for the file
+# histplot() creates the plot with the following variables
+# (datafile, x axis/varaible, setting the labels size, the colour of the histgrams, the kernel density estimation, and the plot position)
 # savefig() saves the plots to a .png file name set below 
 
 f, axes = plt.subplots (2,2)
@@ -141,17 +145,15 @@ sns.histplot(iris, x = "petalwidth", label = "small",color = "red", kde = True, 
 plt.savefig("variable_histograms.png")
 
 
- 
-
-
-# fuction created for a histogram colour coded by species in order to see spread more clearly
-# details similar to above histogram with a few extra additions within hist()
+# function created for a histogram colour coded by species in order to see spread more clearly
+# suptitle() gives the plots an overall title
+# subplot() allows multiple eplots on one .png file
+# hist() creates the histogram
 # alpha = denotes the transparancy of the bars, allowing overlapping variables to still be seen
 # label = labels the colours allowing a legend to also be displayed
 # x/ylabel sets the titles on the axis
 # tight_layout() resizes the fonts of the plots to make them all fit better in the graphic 
 # savefig() saves output as a .png file
-
 
 def hist_func (n ,variable, x_label):
     plt.suptitle ("Variable Distribution When Split by Species")
@@ -165,9 +167,8 @@ def hist_func (n ,variable, x_label):
     plt.savefig ("variable_species_histogram.png")
 
 
-# The 4 lines below are creating a histogram for each 
-# The variables are as follows: plot number (x of 4), variable, x-axis label
-
+# the 4 lines below are creating a histogram for each 
+# the variables are as follows: plot number (n out of 4), variable, x-axis label
 
 hist_func (1, "petalwidth", "Petal Width (cm's)")
 hist_func (2, "petallength", "Petal length (cm's)")
@@ -175,13 +176,11 @@ hist_func (3, "sepalwidth", "Sepal Width (cm's)")
 hist_func (4, "sepallength", "Sepal Length (cm's)")
 
 
-# Defining a function for scatterplot analysis with variables
+# defining a function for scatterplot analysis with variables
 # x/ylabel takes in axis names
 # scatterplot () takes in 2 variables (x & y), data takes in the dataset
 # hue splits the data by class
 # savefig() saves the file as a png file
-
-
 
 def scatter_func (x_name,y_name,x_variable,y_variable,output_name):
     plt.figure()
@@ -191,9 +190,8 @@ def scatter_func (x_name,y_name,x_variable,y_variable,output_name):
     plt.savefig(output_name)
 
 
-# Creating the scatterplots using each variable as required. The variables are as follows 
-#  (X and Y axes labels, x and y variables, output_name)
-
+# creating the scatterplots using each variable as required. The variables are as follows 
+# (x and y axes labels, x and y variables, output_name)
 
 scatter_func ("Sepal Length", "Petal Length", "sepallength", "petallength", "SlengthPlength.png")
 scatter_func ("Sepal Length", "Sepal Width", "sepallength", "sepalwidth", "SwidthSlength.png")
@@ -208,44 +206,46 @@ scatter_func ("Sepal Length", "Petal Width", "sepallength", "petalwidth", "Sleng
 # height takes in the axis length, hue sorts the data by species, and scatter_kws sets the size of the markers
 # savefig() saves the plot as a .png file
 
-
-'''
 def lm_plot( x_value, y_value,output_file):
     sns.lmplot (x = x_value, y = y_value, data = iris,height = 8,  hue = "class", scatter_kws = {"s": 50})
     plt.savefig (output_file)
-'''
 
-# Creating the lmplots using the following variables
+
+# creating the lmplots using the following variables:
 # (x and y variables, output name)
 
-'''
 lm_plot("sepallength", "petallength", "lm_1.png")
 lm_plot("sepallength", "sepalwidth", "lm_2.png")
 lm_plot("petallength", "petalwidth", "lm_3.png")
 lm_plot("sepalwidth", "petallength", "lm_4.png")
 lm_plot("sepalwidth", "petalwidth", "lm_5.png")
 lm_plot("sepallength", "petalwidth", "lm_6.png")
-'''
 
-# Function to create a boxplot/swarmplot 
+
+# function to create a boxplot/swarmplot 
 # subplot() is used for multiple plots on the same graphic and takes arguments (row,column,plot no.)
 # boxplot() creates the boxplot and takes in species type as x, variable as y, and data = dataset
 # swarmplot() creates the swarmplot and like boxplot, takes in species type and variable as x + y,
 # data = dataset, size = size of marker and color changes the colour of the marker point 
-
+# close() closes the current data preventing it from "bleeding" into the next file 
 
 def swarm_plt(variable, output):
     sns.boxplot(x = "class", y = variable, data = iris)
     sns.swarmplot( x = "class", y = variable, data = iris, size = 3, color = "m")
     plt.savefig (output)
     plt.close()
+
 swarm_plt("petalwidth", "boxplot_petal_w.png")
 swarm_plt("petallength", "boxplot_petal_l.png")
 swarm_plt("sepallength", "boxplot_sepal_l.png")
 swarm_plt("sepalwidth", "boxplot_sepal_w.png")
 
 
-
+# sunction to create a boxplot/swarmplot 
+# subplot() is used for multiple plots on the same graphic and takes arguments (row,column)
+# boxplot() creates the boxplot and takes in species type as x, variable as y, and data = dataset, axes determine postion on graph
+# swarmplot() creates the swarmplot and like boxplot, takes in species type and variable as x + y, and axes
+# data = dataset, size = size of marker and color changes the colour of the marker point 
 
 f, axes = plt.subplots (2,2)
 sns.boxplot(x = "class", y = "petalwidth", data = iris, ax = axes [0][0])
@@ -261,20 +261,9 @@ plt.tight_layout()
 plt.savefig("box_swarm_plot.png")
 
 
-
-
-
-
-
-
-
-
-
-
-#pairplot takes in the following variables to output the figure
+# pairplot takes in the following variables to output the figure
 # pairplot() takes in: data = dataset, "kind" sets the output type, "hue" sorts by species
 # savefig() saves the output as a .png file   
-
 
 figurepairplot = sns.pairplot(data = iris, kind = "scatter", hue = "class") 
 plt.savefig ("pair-plot.png")
