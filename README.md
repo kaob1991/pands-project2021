@@ -434,7 +434,7 @@ plt.savefig ("pair-plot")
 
 ### Conclusion 
 
-There are many reasons to use Python over other software and coding packages that are available. Having had previous personal experience with IBM's SPSS (Statistical Package for Social Sciences) in previous studies I found the use of python in this case to be highly customisable, to an extent far greater than I had previously experienced.
+There are many reasons to use Python over other software and coding packages that are available. Compared, for example to program's such as IBM's SPSS (Statistical Package for Social Sciences), Python provides a far greater level of customisation for data analysis. 
 
 Python provides a huge range of extremely powerful packages such as NumPy, pandas, seaborn, and matplotlib that make it incredibly simple to code complex data analytics problems. It's also relatively easy to use and understand, particularly when compared to other lower level programming languages. Programs can be processed relatively quickly, which is another benefit of using the likes of python over other languages or software packages.
 
