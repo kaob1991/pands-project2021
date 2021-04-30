@@ -20,7 +20,7 @@ Image showing different species included in the data set and items measured in t
 
 ​	(Source:https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5)
 
-This dataset is commonly used for machine learning, particularly in statistical classification techniques across multiple disciplines. It is widely considered to be a good option for illustrating problems in the areas of statistical graphics, multivariate statistics. The UCI repository, often considered the source of the "true" dataset, contains well over 200 papers and books referencing the use of the dataset.  It comprises of real, good quality data, in a small but meaningful dataset. This offers a simple but challenging task of discriminating between various types. In fact it is so popular that the dataset is readily available through the scikit-learn package, used in machine learning and statistical modelling. 
+This dataset is commonly used for machine learning, particularly in statistical classification techniques across multiple disciplines. It is widely considered to be a good option for illustrating problems in the areas of statistical graphics, multivariate statistics. The UCI repository, often considered the source of the "true" dataset, contains well over 200 papers and books referencing the use of the dataset.  It comprises real, good quality data, in a small but meaningful dataset. This offers a simple but challenging task of discriminating between various types. In fact it is so popular that the dataset is readily available through the scikit-learn package, used in machine learning and statistical modelling. 
 
 
 
@@ -76,13 +76,13 @@ All of the above were pre-installed in python using anaconda 3, and the code was
    out = open("summary_file_text_output.txt", "w")
    ```
 
- At this point a sanity check was also performed to ensure that there was no issues with the import of the libraries and to ensure that the read in of the dataset was problem-free.
+ At this point a sanity check was also performed to ensure that there were no issues with the import of the libraries and to ensure that the read in of the dataset was problem-free.
 
  ### Basic Analysis
  
  #### Shape()
 
-```shape()``` was ran to get the parameters of the data file, important for understanding the scope of the data frame. It's also important to ensure that the correct dataset is in use as there are many variants of the dataset available on the internet; and using a different version will produce incorrect outputs.
+```shape()``` was run to get the parameters of the data file, important for understanding the scope of the data frame. It's also important to ensure that the correct dataset is in use as there are many variants of the dataset available on the internet; and using a different version will produce incorrect outputs.
 
  ``` python
  print ("This is the shape of the datafile:\n(first number denotes the number of rows, the second the number of columns)", file = out)
@@ -185,7 +185,7 @@ sns.heatmap(iris.corr(), cmap = "Blues", annot = True)
 
 ![](https://github.com/kaob1991/pands-project2021/blob/ad0507feffa779bbc51e5fa42189a926e07067ae/heatmap_correlation.png)
 
-A correlation was also run on the individual species' variables to explore the levels of correlation within, and again, heatmaps were added for for ease of visibility. 
+A correlation was also run on the individual species' variables to explore the levels of correlation within, and again, heatmaps were added for ease of visibility. 
 
 ```python
 
@@ -228,8 +228,7 @@ The results show the following:
 #### Histograms
 
 
-Following the summary analysis the variables were then plotted using a histogram. This will display the variables in an easy-to-read graphic that shows the frequency that individual variables appear in the data frame. 
-
+Following the summary analysis the variables were then plotted using a histogram. This will display the variables in an easy-to-read graphic that shows the frequency that individual variables appear in the data frame. Kernel density estimation (KDE) lines were also added to the histogram plot. These are a way to estimate the probability density function of a random variable. 
 The following sample code was used, making changes to colour and labels as appropriate to adequately differentiate the variables. 
 
 ```python
@@ -255,7 +254,7 @@ Looking at the distribution of the curves:
 
 - The curve for the 'sepal width' follows a normal distribution. 
 
-Following some research into this distribution it was discovered that the multimodal distribution was possibly a indication that the data needed to be further split into the relative species in order to fully determine the relationship (see reference no 28).
+Following some research into this distribution it was discovered that the multimodal distribution was possibly an indication that the data needed to be further split into the relative species in order to fully determine the relationship (see reference no 28).
 Therefore a histogram of each variable was then run, split by species to check the distribution at this point (see reference no. 27), using the sample code below: 
 
 ```python
@@ -358,7 +357,7 @@ When we look at the scatterplots from our data there are a number of relationshi
       There is a weak positive correlation with the variables in this dataset overall. The individual species all appear to have a weak positive relationship but again,       the Iris Setosa has the weakest with the data only slightly showing a positive correlation. 
 
   4) Sepal width and Petal length:
-      There is a weak positive correlation between these 2 data variables, only in Versicolor and Virginica. The data points are rather spread out suggesting a wide           range of variation in the data. Iris Setosa again have no correlation between the variables.
+      There is a weak positive correlation between these 2 data variables, only in Versicolor and Virginica. The data points are rather spread out suggesting a wide           range of variation in the data. Iris Setosa again has no correlation between the variables.
 
   5) Sepal width and petal width:
       There is a weak positive correlation between these 2 data variables, but like the scatterplot above, only with Versicolor and Virginica. The data points are spread       out suggesting a wide range of data variation. Iris Setosa appears to have no correlation between the variables, as above. 
@@ -384,7 +383,7 @@ We can see with this graph it gives a linear regression model allowing the relat
 
 #### Boxplot/Swarmplot
 
-Another way is to present the data as a boxplot overlaid with a swarm plot and this allows the data to be displayed in a clear and concise matter. The visualisation draws attention to the data in the following manner. The sample code used is below for each variable, modifying the variable and plot position: 
+Another way is to present the data as a boxplot overlaid with a swarm plot and this allows the data to be displayed in a clear and concise manner. The visualisation draws attention to the data in the following manner. The sample code used is below for each variable, modifying the variable and plot position: 
 
 ```python 
 f, axes = plt.subplots (2,2)
@@ -422,7 +421,7 @@ Swarm plots (also called bee swarm plots, as they can sometimes resemble swarmin
 #### Pair Plot
 
 
-Finally the presentation of the data as a pair plot graph is both concise and visually striking. The use of seaborn allows the data to be presented in a easy to read manner and is equally straightforward in its display of the scatterplot and histogram data. It produces a matrix of relationships between each variable in the dataset for an instant examination of the data and even allows the data to be split by species type. The code used is equally straightforward and is demonstrated below: 
+Finally the presentation of the data as a pair plot graph is both concise and visually striking. The use of seaborn allows the data to be presented in an easy to read manner and is equally straightforward in its display of the scatterplot and histogram data. It produces a matrix of relationships between each variable in the dataset for an instant examination of the data and even allows the data to be split by species type. The code used is equally straightforward and is demonstrated below: 
 
 ```python 
 figurepairplot = sns.pairplot(data = iris, kind = "scatter", hue = "class") 
@@ -434,11 +433,11 @@ plt.savefig ("pair-plot")
 
 ### Conclusion 
 
-There are many reasons to use Python over other software and coding packages that are available. Compared, for example to program's such as IBM's SPSS (Statistical Package for Social Sciences), Python provides a far greater level of customisation for data analysis. 
+There are many reasons to use Python over other software and coding packages that are available. Compared, for example, to program's such as IBM's SPSS (Statistical Package for Social Sciences), Python provides a far greater level of customisation for data analysis and is also open source, which is a key consideration for businesses as a package such as SPSS costs upwards of $8,500 per year. 
 
 Python provides a huge range of extremely powerful packages such as NumPy, pandas, seaborn, and matplotlib that make it incredibly simple to code complex data analytics problems. It's relatively easy to use and understand, particularly when compared to other lower level programming languages such as C# or java , which require a greater level of knowledge and understanding to perform the same tasks. Programs can be processed relatively quickly, which is another benefit of using the likes of python over other languages or software packages.
 
-Another advantage of using Python over something like Microsoft Excel or SPSS is reproducibility. This both saves time, and ensures consistency. As the programmer has control over the code being written, reproducing the same data is easier, be that with the same dataset, an updated one, or even different sets when looking for the same analysis to be run. The downside to using something like Excel is that to receive the same data output the data analyst has to manually remember complete the sequence of steps taken when originally performing the analysis. 
+Another advantage of using Python over something like Microsoft Excel or SPSS is reproducibility. This both saves time, and ensures consistency. As the programmer has control over the code being written, reproducing the same data is easier, be that with the same dataset, an updated one, or even different sets when looking for the same analysis to be run. The downside to using something like Excel is that to receive the same data output the data analyst has to manually remember to complete the sequence of steps taken when originally performing the analysis. 
 
 The above project shows how easy it is to quickly and concisely display a dataset in a graphical display which allows for analysis of the data with minimal effort. It also allows the presentation of the information to others in an easily-understandable manner. Previous studies have provided plenty of information on the Iris dataset. Research including the references listed below, provided some interesting inspiration for the analysis of this dataset in this project. 
 
@@ -567,3 +566,12 @@ The above project shows how easy it is to quickly and concisely display a datase
 	
 41. https://www.r-bloggers.com/2017/03/python-r-vs-spss-sas/
 	(retrieved 29/04/21 @ 23.37)
+	
+42. https://github.com/Keitho08/pands-project
+	(retrieved 30/04/21 @ 21.27)
+
+43. https://en.wikipedia.org/wiki/Kernel_density_estimation
+	(retrieved 30/04/21 @ 21.34) 
+
+44. https://www.g2.com/products/ibm-spss-statistics/pricing
+	(retrieved 30/04/21 @ 21.41)
