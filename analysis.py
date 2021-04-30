@@ -39,6 +39,10 @@ out = open("summary_file_text_output.txt", "w")
 # and printing the header for ease of differentiation between various outputs
 # file = out outputs the file to the .txt doc
 
+print ("Iris datafile .txt output:", file = out)
+print ("", file = out)
+print ("",file = out)
+
 print ("This is the shape of the datafile:\n(first number denotes the number of rows, the second the number of columns)", file = out)
 print (iris.shape, file = out)
 print ("",file = out) # This is for empty rows for formatting
