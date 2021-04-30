@@ -1,3 +1,6 @@
+Iris datafile .txt output:
+
+
 This is the shape of the datafile:
 (first number denotes the number of rows, the second the number of columns)
 (150, 5)
