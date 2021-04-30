@@ -138,7 +138,7 @@ plt.savefig("heatmap_virginica.png")
 # creating a histogram function that will save to a png file
 # using the axes to set subplots for the file
 # histplot() creates the plot with the following variables
-# (datafile, x axis/varaible, setting the labels size, the colour of the histgrams, the kernel density estimation, and the plot position)
+# (datafile, x axis/variable, setting the labels size, the colour of the histograms, the kernel density estimation, and the plot position)
 # savefig() saves the plots to a .png file name set below 
 
 f, axes = plt.subplots (2,2)
@@ -151,9 +151,9 @@ plt.savefig("variable_histograms.png")
 
 # function created for a histogram colour coded by species in order to see spread more clearly
 # suptitle() gives the plots an overall title
-# subplot() allows multiple eplots on one .png file
+# subplot() allows multiple plots on one .png file
 # hist() creates the histogram
-# alpha = denotes the transparancy of the bars, allowing overlapping variables to still be seen
+# alpha = denotes the transparency of the bars, allowing overlapping variables to still be seen
 # label = labels the colours allowing a legend to also be displayed
 # x/ylabel sets the titles on the axis
 # tight_layout() resizes the fonts of the plots to make them all fit better in the graphic 
@@ -194,7 +194,7 @@ def scatter_func (x_name,y_name,x_variable,y_variable,output_name):
     plt.savefig(output_name)
 
 
-# creating the scatterplots using each variable as required. The variables are as follows 
+# creating the scatterplots using each variable as required. The variables are as follows: 
 # (x and y axes labels, x and y variables, output_name)
 
 scatter_func ("Sepal Length", "Petal Length", "sepallength", "petallength", "SlengthPlength.png")
@@ -227,10 +227,9 @@ lm_plot("sepallength", "petalwidth", "lm_6.png")
 
 
 # function to create a boxplot/swarmplot 
-# subplot() is used for multiple plots on the same graphic and takes arguments (row,column,plot no.)
 # boxplot() creates the boxplot and takes in species type as x, variable as y, and data = dataset
 # swarmplot() creates the swarmplot and like boxplot, takes in species type and variable as x + y,
-# data = dataset, size = size of marker and color changes the colour of the marker point 
+# data = dataset, size = size of marker and color = changes the colour of the marker point 
 # close() closes the current data preventing it from "bleeding" into the next file 
 
 def swarm_plt(variable, output):
@@ -245,9 +244,9 @@ swarm_plt("sepallength", "boxplot_sepal_l.png")
 swarm_plt("sepalwidth", "boxplot_sepal_w.png")
 
 
-# sunction to create a boxplot/swarmplot 
+# function to create a boxplot/swarmplot 
 # subplot() is used for multiple plots on the same graphic and takes arguments (row,column)
-# boxplot() creates the boxplot and takes in species type as x, variable as y, and data = dataset, axes determine postion on graph
+# boxplot() creates the boxplot and takes in species type as x, variable as y, and data = dataset, axes determine position on graph
 # swarmplot() creates the swarmplot and like boxplot, takes in species type and variable as x + y, and axes
 # data = dataset, size = size of marker and color changes the colour of the marker point 
 
